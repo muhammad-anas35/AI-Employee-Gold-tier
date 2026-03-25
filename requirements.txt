@@ -1,0 +1,24 @@
+# Silver Tier Requirements - Core Dependencies
+
+# Gmail API (Required for gmail-watcher and send-email)
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+google-api-python-client==2.116.0
+
+# File system monitoring (Required for filesystem_watcher)
+watchdog==4.0.0
+
+# Environment variables (Required)
+python-dotenv==1.0.0
+
+# System monitoring (Required for orchestrator)
+psutil==5.9.8
+
+# Task scheduling (Required for orchestrator)
+schedule==1.2.0
+
+# Browser automation (Optional - for WhatsApp/LinkedIn)
+# Requires Microsoft C++ Build Tools on Windows
+# Install separately: pip install playwright
+# Then run: playwright install chromium
+# playwright==1.49.0

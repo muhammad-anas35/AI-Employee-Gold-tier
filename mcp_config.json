@@ -1,0 +1,42 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:\\Coding world\\Hackathone_0\\Silver\\AI_Employee_Vault"],
+      "description": "Built-in filesystem access for vault operations"
+    },
+    "playwright": {
+      "command": "node",
+      "args": ["D:\\Coding world\\Hackathone_0\\Silver\\.claude\\skills\\browsing-with-playwright\\scripts\\mcp-server.js"],
+      "env": {
+        "HEADLESS": "false"
+      },
+      "description": "Browser automation for WhatsApp and LinkedIn"
+    }
+  },
+  "notes": {
+    "setup_instructions": [
+      "1. This file should be placed at: C:\\Users\\manas\\.config\\claude-code\\mcp.json (Windows)",
+      "2. Or at: ~/.config/claude-code/mcp.json (Mac/Linux)",
+      "3. Restart Claude Code after making changes",
+      "4. Test with: claude --list-mcp-servers"
+    ],
+    "gmail_mcp": {
+      "status": "Not implemented yet",
+      "alternative": "Using Gmail API directly in Python scripts",
+      "future": "Can add dedicated Gmail MCP server for better integration"
+    },
+    "email_mcp_example": {
+      "comment": "Example of how to add email MCP when available",
+      "config": {
+        "email": {
+          "command": "node",
+          "args": ["/path/to/email-mcp/index.js"],
+          "env": {
+            "GMAIL_CREDENTIALS": "D:\\Coding world\\Hackathone_0\\Silver\\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json"
+          }
+        }
+      }
+    }
+  }
+}

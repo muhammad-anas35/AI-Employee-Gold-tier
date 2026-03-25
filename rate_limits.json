@@ -1,0 +1,38 @@
+{
+  "email_send": {
+    "max_per_hour": 10,
+    "max_per_day": 50,
+    "window_seconds": 3600,
+    "description": "Limit email sending to prevent spam"
+  },
+  "linkedin_post": {
+    "max_per_hour": 3,
+    "max_per_day": 10,
+    "window_seconds": 3600,
+    "description": "Limit LinkedIn posts to maintain quality"
+  },
+  "payment": {
+    "max_per_hour": 3,
+    "max_per_day": 10,
+    "window_seconds": 3600,
+    "description": "Strict limit on payment actions for security"
+  },
+  "api_call": {
+    "max_per_minute": 60,
+    "max_per_hour": 1000,
+    "window_seconds": 60,
+    "description": "General API call rate limiting"
+  },
+  "whatsapp_send": {
+    "max_per_hour": 20,
+    "max_per_day": 100,
+    "window_seconds": 3600,
+    "description": "Limit WhatsApp messages to avoid blocking"
+  },
+  "gmail_api": {
+    "max_per_minute": 25,
+    "max_per_hour": 1000,
+    "window_seconds": 60,
+    "description": "Gmail API quota limits"
+  }
+}

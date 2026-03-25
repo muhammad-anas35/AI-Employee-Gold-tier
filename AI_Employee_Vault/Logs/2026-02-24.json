@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2026-02-24T01:21:18Z",
+    "action_type": "integration_initialized",
+    "actor": "claude_integration",
+    "details": "Claude Code integration started",
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-02-24T01:21:30Z",
+    "action_type": "file_drop_detected",
+    "actor": "filesystem_watcher",
+    "source_file": "C:\\Users\\manas\\AI_Employee_Drop\\test_invoice.md",
+    "action_file": "FILE_test_invoice_1708700400.md",
+    "file_size": 356,
+    "status": "pending"
+  },
+  {
+    "timestamp": "2026-02-24T01:21:50Z",
+    "action_type": "plan_created",
+    "actor": "claude_integration",
+    "task_name": "invoice_processing",
+    "objective": "Process Invoice #2026-001",
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-02-24T01:22:00Z",
+    "action_type": "approval_requested",
+    "actor": "claude_integration",
+    "action_type_detail": "payment",
+    "amount": 1500.00,
+    "recipient": "Acme Corporation",
+    "invoice_reference": "#2026-001",
+    "status": "pending_approval"
+  },
+  {
+    "timestamp": "2026-02-24T01:22:15Z",
+    "action_type": "approval_granted",
+    "actor": "human",
+    "action_type_detail": "payment",
+    "amount": 1500.00,
+    "recipient": "Acme Corporation",
+    "status": "approved"
+  },
+  {
+    "timestamp": "2026-02-24T01:22:30Z",
+    "action_type": "task_completed",
+    "actor": "claude_integration",
+    "task_name": "invoice_processing",
+    "files_moved": [
+      "FILE_test_invoice_1708700400.md",
+      "PLAN_invoice_processing_1708700400.md",
+      "PAYMENT_acme_corporation_1708700400.md"
+    ],
+    "destination": "/Done",
+    "status": "success"
+  }
+]

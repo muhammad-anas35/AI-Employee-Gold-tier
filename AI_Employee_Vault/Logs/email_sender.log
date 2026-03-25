@@ -1,0 +1,27 @@
+2026-03-20 02:13:07,097 - EmailSender - ERROR - Token refresh failed: ('invalid_scope: Bad Request', {'error': 'invalid_scope', 'error_description': 'Bad Request'})
+2026-03-20 02:13:07,101 - EmailSender - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Silver\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-20 02:13:07,101 - EmailSender - ERROR - Please download OAuth2 credentials from Google Cloud Console
+2026-03-20 02:13:25,408 - EmailSender - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Silver\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-20 02:13:25,409 - EmailSender - ERROR - Please download OAuth2 credentials from Google Cloud Console
+2026-03-20 23:34:45,287 - EmailSender - INFO - Token refreshed successfully
+2026-03-20 23:34:45,300 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-20 23:34:45,325 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-20 23:34:45,325 - EmailSender - INFO - Approval required: New contact (alibahi353570@gmail.com)
+2026-03-20 23:34:45,326 - EmailSender - INFO - Created email request: EMAIL_alibahi353570_1774031685.md (status: pending_approval)
+2026-03-20 23:34:45,326 - EmailSender - INFO - Email request created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\EMAIL_alibahi353570_1774031685.md
+2026-03-20 23:34:45,327 - EmailSender - INFO - Approval required. Move to /Approved/ to send.
+2026-03-20 23:39:31,780 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-20 23:39:31,782 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-20 23:39:31,782 - EmailSender - INFO - Checking for approved emails...
+2026-03-20 23:39:31,782 - EmailSender - INFO - Processing: EMAIL_alibahi353570_1774031685.md
+2026-03-20 23:39:40,702 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-20 23:39:40,702 - EmailSender - INFO - Message ID: 19d0c8bcbb3f18bf
+2026-03-20 23:39:40,703 - EmailSender - INFO - Added known contact: alibahi353570@gmail.com
+2026-03-21 00:51:55,017 - EmailSender - INFO - Token refreshed successfully
+2026-03-21 00:51:55,033 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-21 00:51:55,058 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-21 00:51:55,059 - EmailSender - INFO - Created email request: EMAIL_alibahi353570_1774036315.md (status: ready_to_send)
+2026-03-21 00:51:55,060 - EmailSender - INFO - Email request created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Plans\EMAIL_alibahi353570_1774036315.md
+2026-03-21 00:51:55,061 - EmailSender - INFO - Auto-approved, sending immediately...
+2026-03-21 00:51:56,463 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-21 00:51:56,464 - EmailSender - INFO - Message ID: 19d0ccdf3b135534

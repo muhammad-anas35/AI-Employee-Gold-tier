@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2026-03-25T13:30:48.600066",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_test_1774427448.md",
+      "category": "test",
+      "scheduled_for": "2026-03-26T09:00:00.597630"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-03-25T13:42:27.120895",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1774428147.md",
+      "category": "business_update",
+      "scheduled_for": "2026-03-26T09:00:00.120021"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-03-25T15:21:53.439798",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1774434113.md",
+      "category": "business_update",
+      "scheduled_for": "2026-03-26T09:00:00.438756"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-03-25T15:22:03.455529",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_test_1774434123.md",
+      "category": "test",
+      "scheduled_for": "2026-03-26T09:00:00.450376"
+    },
+    "status": "success"
+  }
+]

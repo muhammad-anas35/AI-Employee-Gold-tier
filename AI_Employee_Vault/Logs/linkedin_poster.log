@@ -1,0 +1,40 @@
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - Please login manually
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:53,307 - LinkedInPoster - INFO - Waiting for login...
+2026-03-24 23:35:53,329 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-03-24 23:37:30,925 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774377450.md
+2026-03-24 23:37:30,925 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774377450.md
+2026-03-25 13:30:48,599 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774427448.md
+2026-03-25 13:30:48,600 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774427448.md
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - Please login manually
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:44,376 - LinkedInPoster - INFO - Waiting for login...
+2026-03-25 13:33:35,548 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-03-25 13:33:41,694 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:41,695 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-25 13:33:41,695 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - Please login manually
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:47,408 - LinkedInPoster - INFO - Waiting for login...
+2026-03-25 13:35:47,436 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-03-25 13:42:27,120 - LinkedInPoster - INFO - Created post draft: POST_linkedin_business_update_1774428147.md
+2026-03-25 13:42:27,121 - LinkedInPoster - INFO - Draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_business_update_1774428147.md
+2026-03-25 13:42:27,121 - LinkedInPoster - INFO - Review and move to /Approved/ to publish
+2026-03-25 15:21:53,439 - LinkedInPoster - INFO - Created post draft: POST_linkedin_business_update_1774434113.md
+2026-03-25 15:21:53,450 - LinkedInPoster - INFO - Draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_business_update_1774434113.md
+2026-03-25 15:21:53,451 - LinkedInPoster - INFO - Review and move to /Approved/ to publish
+2026-03-25 15:22:03,455 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774434123.md
+2026-03-25 15:22:03,465 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774434123.md
+2026-03-25 15:22:18,913 - LinkedInPoster - INFO - Checking for approved posts...
+2026-03-25 15:22:18,914 - LinkedInPoster - INFO - No approved posts to publish

@@ -2,8 +2,8 @@ import xmlrpc.client
 
 # Connection details
 url = 'http://localhost:8069'
-db = 'odoo'
-username = 'admin@example.com'  # Change this to your email
+db = 'Ai-Employee'
+username = 'ranabro353570@gmail.com'
 password = 'admin'
 
 print("Testing Odoo API connection...")
@@ -14,7 +14,7 @@ try:
     uid = common.authenticate(db, username, password, {})
 
     if uid:
-        print(f"✅ Authentication successful! UID: {uid}")
+        print(f"[OK] Authentication successful! UID: {uid}")
 
         # Test API access
         models = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/object')
@@ -26,7 +26,7 @@ try:
             [[]],
             {'fields': ['name'], 'limit': 1}
         )
-        print(f"✅ Company: {company[0]['name']}")
+        print(f"[OK] Company: {company[0]['name']}")
 
         # Get partner count
         partner_count = models.execute_kw(
@@ -34,15 +34,15 @@ try:
             'res.partner', 'search_count',
             [[]]
         )
-        print(f"✅ Partners in database: {partner_count}")
+        print(f"[OK] Partners in database: {partner_count}")
 
-        print("\n🎉 Odoo API is working perfectly!")
+        print("\n[SUCCESS] Odoo API is working perfectly!")
 
     else:
-        print("❌ Authentication failed!")
+        print("[FAIL] Authentication failed!")
 
 except Exception as e:
-    print(f"❌ Error: {e}")
+    print(f"[ERROR] {e}")
     print("\nTroubleshooting:")
     print("1. Is Odoo running? Check: docker-compose ps")
     print("2. Is the database created? Go to http://localhost:8069")

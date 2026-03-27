@@ -4,13 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a **Silver Tier** implementation of the Personal AI Employee hackathon project. It's an autonomous AI agent system that monitors Gmail, WhatsApp, and file systems, processes tasks using Claude Code, and manages workflows through an Obsidian vault.
+This is a **Gold Tier** implementation of the Personal AI Employee hackathon project. It's an autonomous AI agent system that monitors Gmail, WhatsApp, file systems, and social media, integrates with Odoo accounting, processes tasks using Claude Code, and manages workflows through an Obsidian vault.
 
 **Architecture:** Local-first, agent-driven, human-in-the-loop automation system.
 
-**Status:** ✅ 100% Complete & Ready for Submission (8/8 Silver Tier Requirements Met)
+**Status:** ⏳ In Progress - Gold Tier Implementation (5% Complete, 4/12 Requirements Partial)
 
-**Last Updated:** 2026-03-24
+**Last Updated:** 2026-03-26
 
 ## Development Setup
 
@@ -20,6 +20,9 @@ This is a **Silver Tier** implementation of the Personal AI Employee hackathon p
 - Obsidian v1.10.6+
 - Node.js v24+ (for MCP servers)
 - Gmail account with API credentials
+- Docker Desktop (for Odoo)
+- Facebook Developer Account (for social media)
+- Twitter Developer Account (for Twitter API)
 
 ### Installation
 
@@ -40,13 +43,17 @@ python verify.py
 
 ### Environment Variables
 
-Required in `.env` (already configured):
+Required in `config/.env` (already configured):
 - `GMAIL_CLIENT_ID` - Gmail API OAuth2 client ID (configured)
 - `GMAIL_CLIENT_SECRET` - Gmail API OAuth2 secret (configured)
-- `VAULT_PATH` - Path to AI_Employee_Vault (set to Silver vault)
+- `VAULT_PATH` - Path to AI_Employee_Vault (set to Gold vault)
 - `DROP_FOLDER` - Path to file drop folder (default: ~/AI_Employee_Drop)
+- `ODOO_URL` - Odoo server URL (default: http://localhost:8069)
+- `ODOO_DB` - Odoo database name (default: odoo)
+- `ODOO_USERNAME` - Odoo admin username
+- `ODOO_PASSWORD` - Odoo admin password
 
-**Note:** `.env` file is already configured. Token.json exists for Gmail authentication.
+**Note:** `config/.env` file is already configured. Token.json exists for Gmail authentication.
 
 ## Architecture
 
@@ -58,12 +65,12 @@ Required in `.env` (already configured):
 - Folders represent workflow stages
 
 **2. Watchers** (Perception Layer)
-- `filesystem_watcher.py` - Monitors drop folder for new files
+- `src/watchers/filesystem_watcher.py` - Monitors drop folder for new files
 - `.claude/skills/gmail-watcher/scripts/gmail_watcher.py` - Monitors Gmail (Silver tier) ✅ TESTED
 - `.claude/skills/whatsapp-watcher/scripts/whatsapp_watcher.py` - Monitors WhatsApp (Silver tier, requires Playwright)
 
 **3. Claude Integration** (Reasoning Layer)
-- `claude_integration.py` - VaultManager class for vault operations
+- `src/integration/claude_integration.py` - VaultManager class for vault operations
 - Reads tasks, creates plans, manages approvals
 - Updates dashboard and logs actions
 
@@ -73,6 +80,7 @@ Required in `.env` (already configured):
 - `/linkedin-poster` - Post to LinkedIn (Silver tier, requires Playwright)
 - `/send-email` - Send emails via Gmail API (Silver tier) ✅ WORKING
 - `/orchestrator` - Master coordinator (Silver tier)
+- `/odoo-integration` - Odoo accounting integration (Gold tier) ⏳ IN PROGRESS
 - `/process-vault-tasks` - Process tasks from Needs_Action
 - `/update-dashboard` - Update Dashboard.md metrics
 - `/browsing-with-playwright` - Browser automation (optional)
@@ -124,7 +132,7 @@ External Event → Watcher → /Needs_Action/TASK.md
 
 ```bash
 # File system watcher (Bronze tier)
-python filesystem_watcher.py
+python src/watchers/filesystem_watcher.py
 
 # Gmail watcher (Silver tier)
 python .claude/skills/gmail-watcher/scripts/gmail_watcher.py
@@ -200,7 +208,7 @@ python .claude/skills/linkedin-poster/scripts/linkedin_poster.py --create "Your 
 python .claude/skills/linkedin-poster/scripts/linkedin_poster.py --publish
 
 # Test vault operations
-python claude_integration.py
+python src/integration/claude_integration.py
 ```
 
 ## Development Guidelines
@@ -216,15 +224,21 @@ import sys
 # Add project root to path (5 parent levels from script)
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent))
 
+# Import from new locations
+from src.watchers.base_watcher import BaseWatcher
+from src.integration.claude_integration import VaultManager
+from src.utils.retry_handler import with_retry
+from src.utils.rate_limiter import rate_limited
+
 # Access vault (5 parent levels from script)
 VAULT_PATH = Path(__file__).parent.parent.parent.parent.parent / "AI_Employee_Vault"
 ```
 
-**Path breakdown:** `scripts/` → `skill-name/` → `skills/` → `.claude/` → `Silver/` (5 levels)
+**Path breakdown:** `scripts/` → `skill-name/` → `skills/` → `.claude/` → `Gold/` (5 levels)
 
 ### Adding New Watchers
 
-1. Inherit from `BaseWatcher` class in `base_watcher.py`
+1. Inherit from `BaseWatcher` class in `src/watchers/base_watcher.py`
 2. Implement `check_for_updates()` and `create_action_file()`
 3. Add to orchestrator process list
 4. Document in SKILL.md
@@ -286,10 +300,10 @@ description: Brief description of what this skill does
 
 ## Key Python Modules
 
-### VaultManager (`claude_integration.py`)
+### VaultManager (`src/integration/claude_integration.py`)
 
 ```python
-from claude_integration import VaultManager
+from src.integration.claude_integration import VaultManager
 
 vault = VaultManager()
 
@@ -312,7 +326,7 @@ vault.update_dashboard({"pending_tasks": 5, "activity": "Processed invoice"})
 ### BaseWatcher Pattern
 
 ```python
-from base_watcher import BaseWatcher
+from src.watchers.base_watcher import BaseWatcher
 
 class MyWatcher(BaseWatcher):
     def check_for_updates(self) -> list:
@@ -334,7 +348,7 @@ class MyWatcher(BaseWatcher):
 ### Claude can't read vault
 - Verify vault path in `.env`
 - Check file permissions: `chmod -R 755 AI_Employee_Vault/`
-- Test integration: `python claude_integration.py`
+- Test integration: `python src/integration/claude_integration.py`
 
 ### Gmail API errors
 - Verify OAuth2 credentials in `.env` (already configured)
@@ -359,6 +373,46 @@ class MyWatcher(BaseWatcher):
 ✅ **Dashboard Updates** - Working
 ✅ **Orchestrator** - Implemented and ready
 
+## Gold Tier Specific
+
+### Gold Tier Requirements (12 Total)
+
+1. ✅ **All Silver Requirements** - 100% Complete (8/8)
+2. ⏳ **Cross-Domain Integration** - 10% (Basic structure in place)
+3. ⏳ **Odoo Accounting** - 20% (Docker config ready, needs setup)
+4. ❌ **Facebook/Instagram** - 0% (Not started)
+5. ❌ **Twitter (X)** - 0% (Not started)
+6. ⏳ **Multiple MCP Servers** - 40% (Filesystem and Playwright configured)
+7. ❌ **Weekly Business Audit** - 0% (Not started)
+8. ⏳ **Error Recovery** - 60% (Retry logic exists, needs enhancement)
+9. ⏳ **Audit Logging** - 50% (Basic logging exists, needs expansion)
+10. ❌ **Ralph Wiggum Loop** - 0% (Not started)
+11. ⏳ **Documentation** - 20% (Basic docs exist, needs architecture docs)
+12. ✅ **All as Agent Skills** - 100% (All implemented as skills)
+
+**Progress:** 5% Complete (4/12 requirements partial)
+**Target:** 100% by April 15, 2026
+
+### Gold Tier Features
+
+**Odoo Integration:**
+- Docker-based Odoo 19 deployment
+- XML-RPC API integration
+- Automated invoice generation
+- Expense tracking
+- Financial reporting
+
+**Social Media:**
+- Facebook/Instagram posting via Graph API
+- Twitter posting via Twitter API v2
+- Approval workflow for all posts
+- Engagement tracking
+
+**Business Intelligence:**
+- Weekly automated business audit
+- Ralph Wiggum autonomous task loop
+- Cross-domain workflow orchestration
+
 ### Optional Features (Require Playwright)
 
 ⚠️ **WhatsApp Watcher** - Implemented, needs Playwright + C++ Build Tools
@@ -373,20 +427,20 @@ class MyWatcher(BaseWatcher):
 
 ### MCP Servers
 
-Configure in `~/.config/claude-code/mcp.json`:
+Configure in `config/mcp_config.json`:
 
 ```json
 {
-  "servers": [
-    {
-      "name": "email",
-      "command": "node",
-      "args": ["/path/to/email-mcp/index.js"],
-      "env": {
-        "GMAIL_CREDENTIALS": "/path/to/credentials.json"
-      }
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "D:\\Coding world\\Hackathone_0\\Gold"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@executeautomation/playwright-mcp-server"]
     }
-  ]
+  }
 }
 ```
 
@@ -394,8 +448,8 @@ Configure in `~/.config/claude-code/mcp.json`:
 
 ```bash
 # Linux/Mac cron
-0 8 * * * cd /path/to/Silver && claude /process-vault-tasks
-*/30 * * * * cd /path/to/Silver && claude /update-dashboard
+0 8 * * * cd /path/to/Gold && claude /process-vault-tasks
+*/30 * * * * cd /path/to/Gold && claude /update-dashboard
 
 # Windows Task Scheduler
 # Create tasks pointing to claude.exe with skill arguments
@@ -411,14 +465,18 @@ Configure in `~/.config/claude-code/mcp.json`:
 
 ## References
 
-- **Complete Guide:** `PROJECT_GUIDE.md` - Comprehensive setup, testing, and demo guide
-- **Project Status:** `PROJECT_STATUS.md` - Current status and next steps
-- **Submission Ready:** `SUBMISSION_READY.md` - Quick submission checklist
-- **Hackathon Document:** `Personal AI Employee Hackathon 0_ Building Autonomous FTEs in 2026.md`
+- **Gold Tier Summary:** `GOLD_TIER_SUMMARY.md` - Quick overview and status
+- **Implementation Plan:** `docs/planning/GOLD_TIER_IMPLEMENTATION_PLAN.md` - 3-week roadmap
+- **Setup Instructions:** `docs/guides/SETUP_INSTRUCTIONS.md` - Step-by-step setup
+- **Gap Analysis:** `docs/analysis/GOLD_TIER_GAP_ANALYSIS.md` - What's missing
+- **Complete Spec:** `docs/planning/SPEC.md` - Full specification
+- **Next Steps:** `NEXT_STEPS.md` - Immediate action guide
+- **Cleanup Summary:** `CLEANUP_FINAL_SUMMARY.md` - Codebase reorganization
+- **Project Status:** `PROJECT_STATUS_COMPLETE.md` - Current status
+- **Quick Reference:** `QUICK_REFERENCE.md` - Quick commands and tips
+- **Hackathon Document:** `docs/archive/Personal AI Employee Hackathon 0...md`
 - **Company Rules:** `AI_Employee_Vault/Company_Handbook.md`
 - **Dashboard:** `AI_Employee_Vault/Dashboard.md`
-- **Test Results:** `FINAL_TEST_REPORT.md`
-- **Compliance Analysis:** `SILVER_TIER_COMPLIANCE_ANALYSIS.md`
 
 ## Quick Commands Reference
 
@@ -434,18 +492,33 @@ python .claude/skills/gmail-watcher/scripts/gmail_watcher.py --test
 # Start orchestrator
 python .claude/skills/orchestrator/scripts/orchestrator.py
 
+# Start Odoo (Gold tier)
+cd docker/odoo && docker-compose up -d
+
+# Test Odoo API (Gold tier)
+python tests/test_odoo_api.py
+
 # Verify setup
-python verify.py
+python tests/verify.py
+
+# Test imports
+python -c "from src.watchers.base_watcher import BaseWatcher; print('OK')"
+python -c "from src.integration.claude_integration import VaultManager; print('OK')"
 ```
 
 ## Project Status
 
-**Silver Tier:** ✅ 8/8 Requirements Met (100%)
+**Gold Tier:** ⏳ 5% Complete (4/12 Requirements Partial)
+**Silver Tier Foundation:** ✅ 100% Complete (8/8)
 **Working Features:** 6/8 (Gmail, Email, File watcher, Approval, Dashboard, Orchestrator)
-**Optional Features:** 2/8 (WhatsApp, LinkedIn - require Playwright)
-**Grade:** A+ (100%)
-**Status:** Ready for demo video and submission
+**In Progress:** Odoo integration, Social media, Business intelligence
+**Status:** Ready for Day 1 implementation
 
 **Next Steps:**
-1. Record 5-10 minute demo video (follow PROJECT_GUIDE.md)
-2. Submit form: https://forms.gle/JR9T1SJq5rmQyGkGA
+1. ✅ Update Python imports - COMPLETE
+2. ✅ Update CLAUDE.md - COMPLETE
+3. ⏳ Install Docker Desktop
+4. ⏳ Start Odoo containers
+5. ⏳ Configure Odoo accounting
+6. ⏳ Implement social media integrations
+7. ⏳ Build business intelligence features

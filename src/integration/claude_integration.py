@@ -13,7 +13,7 @@ from datetime import datetime
 from typing import List, Dict, Optional
 
 # Configuration
-VAULT_PATH = Path(__file__).parent / "AI_Employee_Vault"
+VAULT_PATH = Path(__file__).parent.parent.parent / "AI_Employee_Vault"
 NEEDS_ACTION = VAULT_PATH / "Needs_Action"
 PLANS = VAULT_PATH / "Plans"
 PENDING_APPROVAL = VAULT_PATH / "Pending_Approval"

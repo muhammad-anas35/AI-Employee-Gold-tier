@@ -15,8 +15,8 @@ from typing import List, Dict, Optional, Any
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent))
 
-from base_watcher import BaseWatcher
-from retry_handler import with_retry, TransientError
+from src.watchers.base_watcher import BaseWatcher
+from src.utils.retry_handler import with_retry, TransientError
 
 # Playwright imports
 try:

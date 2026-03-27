@@ -20,7 +20,7 @@ from email import encoders
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent.parent))
 
-from rate_limiter import RateLimiter
+from src.utils.rate_limiter import RateLimiter
 
 # Gmail API imports
 try:

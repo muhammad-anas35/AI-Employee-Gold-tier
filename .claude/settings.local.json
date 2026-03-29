@@ -1,5 +1,10 @@
 {
   "enabledPlugins": {
     "ralph-loop@claude-plugins-official": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(cd \"D:\\\\Coding world\\\\Hackathone_0\\\\Gold\" && python -c \"import sys; sys.path.insert\\(0, '.'\\); from pathlib import Path; print\\('Playwright installed:', Path\\('.claude/skills/linkedin-poster/scripts/linkedin_poster.py'\\).exists\\(\\)\\)\")"
+    ]
   }
 }

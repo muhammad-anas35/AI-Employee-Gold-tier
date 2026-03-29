@@ -1,7 +1,7 @@
 {
-  "period_start": "2026-03-16T16:20:35.727761",
-  "period_end": "2026-03-22T16:20:35.727761",
-  "generated_at": "2026-03-27T16:20:35.734768",
+  "period_start": "2026-03-16T20:11:51.927238",
+  "period_end": "2026-03-22T20:11:51.927238",
+  "generated_at": "2026-03-27T20:11:51.931416",
   "metrics": {
     "emails_processed": 2,
     "tasks_completed": 5,

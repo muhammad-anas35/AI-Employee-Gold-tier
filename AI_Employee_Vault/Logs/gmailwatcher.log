@@ -8,3 +8,6 @@
 2026-03-25 10:01:19,659 - GmailWatcher - INFO - Gmail API authenticated successfully
 2026-03-25 10:01:20,898 - GmailWatcher - INFO - Found 0 new email(s)
 2026-03-25 10:01:20,898 - GmailWatcher - INFO - Test complete
+2026-03-29 23:20:02,969 - GmailWatcher - INFO - Running in test mode...
+2026-03-29 23:20:02,970 - GmailWatcher - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Gold\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-29 23:20:02,970 - GmailWatcher - ERROR - Please download OAuth2 credentials from Google Cloud Console

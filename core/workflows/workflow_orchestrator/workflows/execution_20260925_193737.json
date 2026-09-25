@@ -1,0 +1,43 @@
+{
+  "workflow": "content_publish",
+  "started_at": "2026-09-25T19:37:37.830771",
+  "steps": [
+    {
+      "step": "post_linkedin",
+      "domain": "linkedin",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:37:37.830970",
+      "message": "LinkedIn post draft created, awaiting approval"
+    },
+    {
+      "step": "post_twitter",
+      "domain": "twitter",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:37:37.831415",
+      "message": "Twitter post draft created, awaiting approval"
+    },
+    {
+      "step": "post_facebook",
+      "domain": "facebook",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:37:37.831905",
+      "message": "Facebook post draft created, awaiting approval"
+    },
+    {
+      "step": "send_notification",
+      "domain": "gmail",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:37:37.832385",
+      "message": "Email draft created, awaiting approval"
+    },
+    {
+      "step": "update_dashboard",
+      "domain": "vault",
+      "status": "success",
+      "timestamp": "2026-09-25T19:37:37.833071",
+      "message": "Dashboard updated"
+    }
+  ],
+  "status": "awaiting_approval",
+  "completed_at": "2026-09-25T19:37:37.833213"
+}

@@ -1,6 +1,6 @@
 # 🐍 Source Code Directory
 
-This directory contains all Python source code for the Gold Tier AI Employee project.
+This directory contains all Python source code for the Nexus AI Employee project.
 
 ---
 

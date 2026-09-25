@@ -17,3 +17,10 @@
 2026-09-21 08:25:42,522 - GmailWatcher - INFO - Gmail API authenticated successfully
 2026-09-21 08:25:43,134 - GmailWatcher - INFO - Found 0 new email(s)
 2026-09-21 08:25:43,137 - GmailWatcher - INFO - Test complete
+2026-09-25 19:30:08,133 - GmailWatcher - WARNING - Could not load token: name 'Credentials' is not defined
+2026-09-25 19:30:10,135 - GmailWatcher - WARNING - Could not load token: name 'Credentials' is not defined
+2026-09-25 19:30:14,139 - GmailWatcher - WARNING - Could not load token: name 'Credentials' is not defined
+2026-09-25 19:31:49,539 - GmailWatcher - INFO - Gmail API authenticated successfully
+2026-09-25 19:50:06,686 - GmailWatcher - INFO - Gmail API authenticated successfully
+2026-09-25 19:58:52,665 - GmailWatcher - INFO - Gmail API authenticated successfully
+2026-09-25 20:01:57,882 - GmailWatcher - INFO - Gmail API authenticated successfully

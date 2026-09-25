@@ -1,6 +1,6 @@
 # 🧪 Tests Directory
 
-This directory contains all test files for the Gold Tier AI Employee project.
+This directory contains all test files for the Nexus AI Employee project.
 
 ---
 

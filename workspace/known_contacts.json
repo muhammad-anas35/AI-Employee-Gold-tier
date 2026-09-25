@@ -6,6 +6,13 @@
       "added": "2026-03-20T23:39:40.702643",
       "last_contact": "2026-03-20T23:39:40.702652",
       "auto_approve": false
+    },
+    {
+      "email": "test@example.com",
+      "name": "",
+      "added": "2026-09-25T19:29:48.854265",
+      "last_contact": "2026-09-25T19:29:48.854274",
+      "auto_approve": false
     }
   ]
 }

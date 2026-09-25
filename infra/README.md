@@ -1,6 +1,6 @@
 # 🐳 Docker Directory
 
-This directory contains Docker configurations for the Gold Tier AI Employee project.
+This directory contains Docker configurations for the Nexus AI Employee project.
 
 ---
 

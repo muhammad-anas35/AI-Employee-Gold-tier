@@ -1,0 +1,117 @@
+[
+  {
+    "timestamp": "2026-09-25T19:28:46.883014",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1790346526.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "status": "pending_approval"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:29:48.855724",
+    "action_type": "email_sent",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1790346526.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "timestamp": "2026-09-25T19:29:48.855718"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:32:53.351603",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1790346773.md",
+      "category": "business_update",
+      "scheduled_for": "2026-09-29T09:00:00.350999"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:48:26.056153",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1790347706.md",
+      "category": "business_update",
+      "scheduled_for": "2025-01-15T09:00:00"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:50:06.677233",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1790347806.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "status": "ready_to_send"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:50:07.447991",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1790347807.md",
+      "category": "business_update",
+      "scheduled_for": "2026-09-29T09:00:00.442130"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:58:52.658803",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1790348332.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "status": "ready_to_send"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T19:58:53.322528",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1790348333.md",
+      "category": "business_update",
+      "scheduled_for": "2026-09-29T09:00:00.319826"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T20:01:57.873882",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1790348517.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "status": "ready_to_send"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-09-25T20:01:58.368516",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_business_update_1790348518.md",
+      "category": "business_update",
+      "scheduled_for": "2026-09-29T09:00:00.367906"
+    },
+    "status": "success"
+  }
+]

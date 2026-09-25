@@ -1,7 +1,7 @@
-# Gold Tier Architecture Documentation
+# Nexus Architecture Documentation
 
 **Version:** 1.0
-**Last Updated:** 2026-03-27
+**Last Updated:** 2026-09-25
 **Status:** Production Ready
 
 ---
@@ -20,7 +20,7 @@
 
 ## System Overview
 
-The Gold Tier AI Employee is an autonomous business automation system that monitors multiple input channels (email, WhatsApp, files, social media), processes tasks using Claude AI, integrates with business systems (Odoo accounting), and executes actions with human-in-the-loop approval for sensitive operations.
+Nexus is an autonomous personal AI assistant that monitors multiple input channels (email, WhatsApp, files, social media), processes tasks using Claude AI, integrates with business systems (Odoo accounting), and executes actions with human-in-the-loop approval for sensitive operations.
 
 ### Key Characteristics
 
@@ -40,8 +40,8 @@ The Gold Tier AI Employee is an autonomous business automation system that monit
 **Purpose:** Monitor external systems for events and changes
 
 **Components:**
-- Gmail Watcher (`gmail-watcher`)
-- WhatsApp Watcher (`whatsapp-watcher`)
+- Gmail Watcher (`gmail_watcher`)
+- WhatsApp Watcher (`whatsapp_watcher`)
 - File System Watcher (`filesystem_watcher.py`)
 - Odoo Event Monitor (future)
 
@@ -50,32 +50,30 @@ The Gold Tier AI Employee is an autonomous business automation system that monit
 - Playwright for WhatsApp Web automation
 - Python watchdog for file system events
 
-**Output:** Creates action files in `/Needs_Action` folder
+**Output:** Creates action files in `workspace/inbox/` folder
 
 ### 2. Knowledge Layer (Storage)
 
 **Purpose:** Central knowledge base and state management
 
 **Components:**
-- Obsidian Vault (`AI_Employee_Vault/`)
+- Obsidian Vault (`workspace/`)
 - Markdown files for all state
 - JSON logs for audit trail
 
 **Folder Structure:**
 ```
-AI_Employee_Vault/
-├── Dashboard.md              # Real-time metrics
+workspace/
+├── dashboard.md              # Real-time metrics
 ├── Company_Handbook.md       # Rules and policies
-├── Inbox/                    # Manual drops
-├── Needs_Action/             # Pending tasks
-├── Plans/                    # Execution plans
-├── Pending_Approval/         # Awaiting approval
-├── Approved/                 # Approved actions
-├── Rejected/                 # Rejected actions
-├── Done/                     # Completed tasks
-├── Reports/                  # Business reports
-├── Accounting/               # Financial records
-└── Logs/                     # Audit trail (JSON)
+├── inbox/                    # Manual drops / Needs_Action
+├── pending/                  # Pending approval
+├── approved/                 # Approved actions
+├── rejected/                 # Rejected actions
+├── archive/                  # Completed tasks
+├── reports/                  # Business reports
+├── accounting/               # Financial records
+└── logs/                     # Audit trail (JSON)
 ```
 
 ### 3. Reasoning Layer (Processing)
@@ -84,12 +82,12 @@ AI_Employee_Vault/
 
 **Components:**
 - Claude Code CLI (primary AI)
-- VaultManager (`claude_integration.py`)
+- VaultManager (`src/integration/claude_integration.py`)
 - Ralph Wiggum Loop (autonomous processor)
 - Workflow Orchestrator (cross-domain)
 
 **Process:**
-1. Read task from `/Needs_Action`
+1. Read task from `workspace/inbox/`
 2. Analyze requirements
 3. Create execution plan
 4. Determine if approval needed
@@ -100,9 +98,9 @@ AI_Employee_Vault/
 **Purpose:** Execute approved actions across domains
 
 **Components:**
-- Email Sender (`send-email`)
-- Social Media Posters (`facebook-poster`, `twitter-poster`, `linkedin-poster`)
-- Odoo Integration (`odoo-integration`)
+- Email Sender (`email_sender`)
+- Social Media Posters (`linkedin_poster`, `facebook_poster`)
+- Odoo Integration (`odoo_client`)
 - File Operations (built-in)
 
 **Technology:**
@@ -116,10 +114,10 @@ AI_Employee_Vault/
 **Purpose:** Coordinate all components and manage lifecycle
 
 **Components:**
-- Orchestrator (`orchestrator`)
-- Ralph Wiggum Loop (`ralph-wiggum-loop`)
-- Workflow Orchestrator (`workflow-orchestrator`)
-- Business Audit (`business-audit`)
+- Orchestrator (`core/orchestrator`)
+- Ralph Wiggum Loop (`core/autonomy/ralph_wiggum_loop`)
+- Workflow Orchestrator (`core/workflows/workflow_orchestrator`)
+- Business Audit (`core/intelligence/business_audit`)
 
 **Responsibilities:**
 - Start/stop watchers
@@ -142,44 +140,44 @@ AI_Employee_Vault/
 └────────┬────────┴─────┬──────┴──────┬────────┴──────┬───────┘
          │              │             │               │
          └──────────────┴─────────────┴───────────────┘
-                         │
-                         ▼
-         ┌───────────────────────────────────┐
-         │      KNOWLEDGE LAYER              │
-         │   (Obsidian Vault - Markdown)     │
-         │                                   │
-         │  /Needs_Action → /Plans →         │
-         │  /Pending_Approval → /Approved →  │
-         │  /Done                            │
-         └───────────────┬───────────────────┘
-                         │
-                         ▼
-         ┌───────────────────────────────────┐
-         │      REASONING LAYER              │
-         ├───────────────────────────────────┤
-         │  Claude Code CLI                  │
-         │  VaultManager                     │
-         │  Ralph Wiggum Loop                │
-         │  Workflow Orchestrator            │
-         └───────────────┬───────────────────┘
-                         │
-                         ▼
-         ┌───────────────────────────────────┐
-         │      ACTION LAYER                 │
-         ├───────────────────────────────────┤
-         │  Email  │  Social  │  Odoo  │ File│
-         │  Sender │  Posters │  API   │ Ops │
-         └───────────────┬───────────────────┘
-                         │
-                         ▼
-         ┌───────────────────────────────────┐
-         │   ORCHESTRATION LAYER             │
-         ├───────────────────────────────────┤
-         │  Orchestrator (Master Process)    │
-         │  Health Monitoring                │
-         │  Auto-Restart                     │
-         │  Business Audit                   │
-         └───────────────────────────────────┘
+                          │
+                          ▼
+          ┌───────────────────────────────────┐
+          │      KNOWLEDGE LAYER              │
+          │   (Obsidian Vault - Markdown)     │
+          │                                   │
+          │  /inbox → /plans →                │
+          │  /pending → /approved →           │
+          │  /archive                         │
+          └───────────────┬───────────────────┘
+                          │
+                          ▼
+          ┌───────────────────────────────────┐
+          │      REASONING LAYER              │
+          ├───────────────────────────────────┤
+          │  Claude Code CLI                  │
+          │  VaultManager                     │
+          │  Ralph Wiggum Loop                │
+          │  Workflow Orchestrator            │
+          └───────────────┬───────────────────┘
+                          │
+                          ▼
+          ┌───────────────────────────────────┐
+          │      ACTION LAYER                 │
+          ├───────────────────────────────────┤
+          │  Email  │  Social  │  Odoo  │ File│
+          │  Sender │  Posters │  API   │ Ops │
+          └───────────────┬───────────────────┘
+                          │
+                          ▼
+          ┌───────────────────────────────────┐
+          │   ORCHESTRATION LAYER             │
+          ├───────────────────────────────────┤
+          │  Orchestrator (Master Process)    │
+          │  Health Monitoring                │
+          │  Auto-Restart                     │
+          │  Business Audit                   │
+          └───────────────────────────────────┘
 ```
 
 ---
@@ -189,23 +187,23 @@ AI_Employee_Vault/
 ### 1. Email Processing Flow
 
 ```
-Gmail → Gmail Watcher → /Needs_Action/EMAIL_*.md
-                              ↓
-                    Ralph Wiggum Loop reads
-                              ↓
-                    Analyzes: "Reply needed"
-                              ↓
-                    Creates draft response
-                              ↓
-                    /Pending_Approval/EMAIL_*.md
-                              ↓
-                    Human reviews & approves
-                              ↓
-                    Moves to /Approved/
-                              ↓
-                    Email Sender executes
-                              ↓
-                    Moves to /Done/ + logs
+Gmail → Gmail Watcher → workspace/inbox/EMAIL_*.md
+                          ↓
+                Ralph Wiggum Loop reads
+                          ↓
+                Analyzes: "Reply needed"
+                          ↓
+                Creates draft response
+                          ↓
+                workspace/pending/EMAIL_*.md
+                          ↓
+                Human reviews & approves
+                          ↓
+                Moves to workspace/approved/
+                          ↓
+                Email Sender executes
+                          ↓
+                Moves to workspace/archive/ + logs
 ```
 
 ### 2. Invoice Workflow
@@ -213,7 +211,7 @@ Gmail → Gmail Watcher → /Needs_Action/EMAIL_*.md
 ```
 Email: "Need invoice for Project X"
                 ↓
-        /Needs_Action/EMAIL_*.md
+        workspace/inbox/EMAIL_*.md
                 ↓
         Ralph Wiggum Loop
                 ↓
@@ -227,7 +225,7 @@ Email: "Need invoice for Project X"
                 ↓
         Step 4: Update dashboard (auto)
                 ↓
-        /Done/ + audit log
+        workspace/archive/ + audit log
 ```
 
 ### 3. Social Media Publishing Flow
@@ -235,22 +233,21 @@ Email: "Need invoice for Project X"
 ```
 File drop: blog_post.md
                 ↓
-        File Watcher → /Needs_Action/FILE_*.md
+        File Watcher → workspace/inbox/FILE_*.md
                 ↓
         Ralph Wiggum Loop
                 ↓
         Workflow: "content_publish"
                 ↓
         Creates drafts:
-        - /Pending_Approval/POST_LINKEDIN_*.md
-        - /Pending_Approval/TWEET_*.md
-        - /Pending_Approval/POST_FACEBOOK_*.md
+        - workspace/pending/POST_LINKEDIN_*.md
+        - workspace/pending/POST_FACEBOOK_*.md
                 ↓
         Human approves all
                 ↓
         Posters execute in parallel
                 ↓
-        Screenshots saved to /Done/
+        Screenshots saved to workspace/archive/
 ```
 
 ---
@@ -260,21 +257,21 @@ File drop: blog_post.md
 ### Local Development
 
 ```
-Windows 10/11 Machine
-├── Python 3.13+ (AI Employee code)
-├── Node.js 24+ (MCP servers)
-├── Docker Desktop (Odoo)
-├── Claude Code CLI
+Windows 10/11 / Linux / macOS
+├── Python 3.11+ (Nexus code)
+├── Node.js 18+ (MCP servers)
+├── Docker Desktop (Odoo + PostgreSQL)
+├── Chrome/Chromium (Playwright)
 └── Obsidian (optional, for vault viewing)
 ```
 
 ### Production Deployment
 
 ```
-Cloud VM (AWS/Azure/GCP)
+Cloud VM (AWS/Azure/GCP) or Local Server
 ├── Ubuntu 22.04 LTS
-├── Python 3.13+ with systemd services
-├── Docker for Odoo
+├── Python 3.11+ with systemd services
+├── Docker for Odoo + PostgreSQL
 ├── Nginx reverse proxy (for Odoo)
 ├── Automated backups (vault + logs)
 └── Monitoring (health checks)
@@ -282,17 +279,17 @@ Cloud VM (AWS/Azure/GCP)
 
 ### Systemd Services
 
-```bash
-# /etc/systemd/system/ai-employee-orchestrator.service
+```ini
+# /etc/systemd/system/nexus.service
 [Unit]
-Description=AI Employee Orchestrator
+Description=Nexus AI Assistant
 After=network.target
 
 [Service]
 Type=simple
-User=aiemployee
-WorkingDirectory=/opt/ai-employee
-ExecStart=/usr/bin/python3 .claude/skills/orchestrator/scripts/orchestrator.py
+User=nexus
+WorkingDirectory=/opt/nexus
+ExecStart=/opt/nexus/venv/bin/nexus daemon start --foreground
 Restart=always
 
 [Install]
@@ -305,8 +302,8 @@ WantedBy=multi-user.target
 
 ### 1. Credential Management
 
-- **Environment Variables:** All credentials in `.env` file
-- **Never Committed:** `.env` in `.gitignore`
+- **Environment Variables:** All credentials in `config/` (gitignored)
+- **Never Committed:** `.gitignore` excludes `config/`, `workspace/`, `browser_data/`
 - **Encryption:** OAuth tokens encrypted at rest
 - **Rotation:** Regular credential rotation policy
 
@@ -336,7 +333,7 @@ WantedBy=multi-user.target
 
 ### 4. Access Control
 
-- **File Permissions:** Vault readable only by AI Employee user
+- **File Permissions:** Vault readable only by Nexus user
 - **API Keys:** Scoped to minimum required permissions
 - **OAuth:** Gmail uses OAuth2 with refresh tokens
 - **Browser Sessions:** Playwright sessions isolated per skill
@@ -407,7 +404,7 @@ WantedBy=multi-user.target
 ## Technology Stack
 
 ### Core
-- **Python 3.13+** - Main programming language
+- **Python 3.11+** - Main programming language
 - **Claude Code CLI** - AI reasoning engine
 - **Obsidian Vault** - Knowledge base (Markdown)
 
@@ -426,6 +423,8 @@ WantedBy=multi-user.target
 - **playwright** - Browser automation
 - **watchdog** - File system monitoring
 - **requests** - HTTP client
+- **rich** - Beautiful CLI output
+- **click** - CLI framework
 
 ---
 
@@ -440,6 +439,23 @@ WantedBy=multi-user.target
 
 ---
 
-**Document Version:** 1.0
-**Last Updated:** 2026-03-27
-**Maintained By:** AI Employee Development Team
+## Technology Stack Summary
+
+| Category | Technology |
+|----------|------------|
+| Language | Python 3.11+ |
+| AI Engine | Claude Code CLI |
+| Knowledge Base | Obsidian Vault (Markdown) |
+| Email | Gmail API (OAuth2) |
+| Accounting | Odoo XML-RPC |
+| Browser Automation | Playwright |
+| File Monitoring | watchdog |
+| Containerization | Docker |
+| Process Management | systemd |
+| CLI Framework | Click + Rich |
+
+---
+
+*Document Version: 1.0*
+*Last Updated: 2026-09-25*
+*Maintained By: Nexus Development Team*

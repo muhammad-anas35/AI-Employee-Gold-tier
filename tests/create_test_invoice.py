@@ -10,7 +10,7 @@ from datetime import datetime
 # Connection details
 url = 'http://localhost:8069'
 db = 'Ai-Employee'
-username = 'ranabro353570@gmail.com'
+username = 'admin@nexus.local'
 password = 'admin'
 
 print("Creating test invoice in Odoo...")

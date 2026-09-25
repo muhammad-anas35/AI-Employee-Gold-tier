@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2026-03-20T23:34:45.326217",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_alibahi353570_1774031685.md",
+      "to": "alibahi353570@gmail.com",
+      "subject": "Test from AI Employee",
+      "status": "pending_approval"
+    },
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-03-20T23:39:40.748195",
+    "action_type": "email_sent",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_alibahi353570_1774031685.md",
+      "to": "alibahi353570@gmail.com",
+      "subject": "Test from AI Employee",
+      "timestamp": "2026-03-20T23:39:40.748186"
+    },
+    "status": "success"
+  }
+]

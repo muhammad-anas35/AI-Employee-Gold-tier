@@ -14,14 +14,14 @@ from typing import List, Optional, Any
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+# Add project root to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from base_watcher import BaseWatcher
-from retry_handler import with_retry
+from src.watchers.base_watcher import BaseWatcher
+from src.utils.retry_handler import with_retry
 
 # Configuration
-VAULT_PATH = Path(__file__).parent / "AI_Employee_Vault"
+VAULT_PATH = Path(__file__).parent.parent.parent / "AI_Employee_Vault"
 DROP_FOLDER = Path.home() / "AI_Employee_Drop"
 PROCESSED_FILE = VAULT_PATH / ".processed_files"
 
@@ -30,7 +30,7 @@ class FileSystemWatcher(BaseWatcher):
     """Monitors drop folder for new files"""
 
     def __init__(self, vault_path: Path = VAULT_PATH, check_interval: int = 5):
-        super().__init__(vault_path, check_interval, "FileSystemWatcher")
+        super().__init__(vault_path, check_interval)
         self.drop_folder = DROP_FOLDER
         self.processed_files = self._load_processed_files()
         self.pending_files = []

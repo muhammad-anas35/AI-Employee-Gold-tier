@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2026-03-24T23:37:30.925432",
+    "action_type": "post_draft_created",
+    "actor": "linkedin_poster",
+    "details": {
+      "file": "POST_linkedin_test_1774377450.md",
+      "category": "test",
+      "scheduled_for": "2026-03-25T09:00:00.924020"
+    },
+    "status": "success"
+  }
+]

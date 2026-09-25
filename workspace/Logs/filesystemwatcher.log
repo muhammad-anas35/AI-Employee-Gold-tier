@@ -1,0 +1,10 @@
+2026-09-21 08:23:40,092 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/AI_Employee_Drop
+2026-09-21 08:23:40,094 - FileSystemWatcher - INFO - Running in test mode...
+2026-09-21 08:23:40,095 - FileSystemWatcher - INFO - Found 0 new file(s)
+2026-09-21 08:23:40,095 - FileSystemWatcher - INFO - Test complete
+2026-09-21 08:26:35,749 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/AI_Employee_Drop
+2026-09-21 08:26:35,750 - FileSystemWatcher - INFO - Running in test mode...
+2026-09-21 08:26:36,251 - FileSystemWatcher - INFO - New file detected: invoice_request.txt
+2026-09-21 08:26:36,252 - FileSystemWatcher - INFO - Found 1 new file(s)
+2026-09-21 08:26:36,253 - FileSystemWatcher - INFO - Created action file: FILE_invoice_request_1789961196.md
+2026-09-21 08:26:36,258 - FileSystemWatcher - INFO - Test complete

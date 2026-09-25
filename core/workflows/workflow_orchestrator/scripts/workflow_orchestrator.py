@@ -71,11 +71,6 @@ WORKFLOW_TEMPLATES = {
                 "description": "Post to LinkedIn"
             },
             {
-                "action": "post_twitter",
-                "domain": "twitter",
-                "description": "Post to Twitter"
-            },
-            {
                 "action": "post_facebook",
                 "domain": "facebook",
                 "description": "Post to Facebook"
@@ -170,10 +165,6 @@ class WorkflowOrchestrator:
             elif step["domain"] == "linkedin":
                 result["status"] = "approval_required"
                 result["message"] = "LinkedIn post draft created, awaiting approval"
-
-            elif step["domain"] == "twitter":
-                result["status"] = "approval_required"
-                result["message"] = "Twitter post draft created, awaiting approval"
 
             elif step["domain"] == "facebook":
                 result["status"] = "approval_required"

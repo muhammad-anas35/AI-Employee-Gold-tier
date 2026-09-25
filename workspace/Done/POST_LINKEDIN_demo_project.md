@@ -9,7 +9,7 @@ image: poster.jpeg
 
 **Content:**
 
-🎉 Excited to share my Gold Tier AI Employee project!
+🎉 Excited to share my Nexus AI Employee project!
 
 Built a complete autonomous business automation system that:
 ✅ Monitors Gmail and WhatsApp
@@ -23,7 +23,7 @@ Built a complete autonomous business automation system that:
 • $50,100/year value
 • 75% autonomy
 
-🏆 Gold Tier Achievement:
+🏆 Nexus Achievement:
 • 12/12 requirements met
 • 6,537 lines of code
 • 14 agent skills

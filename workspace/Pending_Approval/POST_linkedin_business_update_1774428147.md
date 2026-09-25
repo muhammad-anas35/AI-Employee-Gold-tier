@@ -10,7 +10,7 @@ category: business_update
 
 ## Post Content
 
-🎉 Excited to share that our Silver Tier AI Employee project is 100% complete! All 8 features tested and working. Built with Python, Claude Code, and Playwright. #AI #Automation #Innovation
+🎉 Excited to share that our Nexus AI Employee project is 100% complete! All 8 features tested and working. Built with Python, Claude Code, and Playwright. #AI #Automation #Innovation
 
 ## Hashtags
 

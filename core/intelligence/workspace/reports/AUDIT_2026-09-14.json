@@ -1,0 +1,15 @@
+{
+  "period_start": "2026-09-14T19:34:52.334016",
+  "period_end": "2026-09-20T19:34:52.334016",
+  "generated_at": "2026-09-25T19:34:52.339279",
+  "metrics": {
+    "emails_processed": 0,
+    "tasks_completed": 0,
+    "social_posts": 0,
+    "invoices_generated": 0,
+    "files_organized": 0,
+    "auto_executed": 0,
+    "approval_requested": 0,
+    "errors": 0
+  }
+}

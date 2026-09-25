@@ -1,0 +1,118 @@
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - Please login manually
+2026-03-24 23:33:48,493 - LinkedInPoster - INFO - ============================================================
+2026-03-24 23:33:53,307 - LinkedInPoster - INFO - Waiting for login...
+2026-03-24 23:35:53,329 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-03-24 23:37:30,925 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774377450.md
+2026-03-24 23:37:30,925 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774377450.md
+2026-03-25 13:30:48,599 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774427448.md
+2026-03-25 13:30:48,600 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774427448.md
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-25 13:31:33,464 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - Please login manually
+2026-03-25 13:31:33,465 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:31:44,376 - LinkedInPoster - INFO - Waiting for login...
+2026-03-25 13:33:35,548 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-03-25 13:33:41,694 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:41,695 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-25 13:33:41,695 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - Please login manually
+2026-03-25 13:33:41,696 - LinkedInPoster - INFO - ============================================================
+2026-03-25 13:33:47,408 - LinkedInPoster - INFO - Waiting for login...
+2026-03-25 13:35:47,436 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-03-25 13:42:27,120 - LinkedInPoster - INFO - Created post draft: POST_linkedin_business_update_1774428147.md
+2026-03-25 13:42:27,121 - LinkedInPoster - INFO - Draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_business_update_1774428147.md
+2026-03-25 13:42:27,121 - LinkedInPoster - INFO - Review and move to /Approved/ to publish
+2026-03-25 15:21:53,439 - LinkedInPoster - INFO - Created post draft: POST_linkedin_business_update_1774434113.md
+2026-03-25 15:21:53,450 - LinkedInPoster - INFO - Draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_business_update_1774434113.md
+2026-03-25 15:21:53,451 - LinkedInPoster - INFO - Review and move to /Approved/ to publish
+2026-03-25 15:22:03,455 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774434123.md
+2026-03-25 15:22:03,465 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774434123.md
+2026-03-25 15:22:18,913 - LinkedInPoster - INFO - Checking for approved posts...
+2026-03-25 15:22:18,914 - LinkedInPoster - INFO - No approved posts to publish
+2026-03-31 22:22:35,587 - LinkedInPoster - INFO - Checking for approved posts...
+2026-03-31 22:22:35,588 - LinkedInPoster - INFO - Found 2 approved post(s)
+2026-03-31 22:22:35,588 - LinkedInPoster - INFO - Publishing: POST_FACEBOOK_demo_project.md
+2026-03-31 22:23:25,703 - LinkedInPoster - ERROR - Timeout waiting for LinkedIn to load
+2026-03-31 22:23:25,703 - LinkedInPoster - ERROR - Failed to publish post: POST_FACEBOOK_demo_project.md
+2026-03-31 22:23:30,706 - LinkedInPoster - INFO - Publishing: POST_LINKEDIN_demo_project.md
+2026-03-31 22:23:49,293 - LinkedInPoster - ERROR - Timeout waiting for LinkedIn to load
+2026-03-31 22:23:49,293 - LinkedInPoster - ERROR - Failed to publish post: POST_LINKEDIN_demo_project.md
+2026-03-31 22:37:07,219 - LinkedInPoster - INFO - ============================================================
+2026-03-31 22:37:07,219 - LinkedInPoster - INFO - LinkedIn Setup
+2026-03-31 22:37:07,219 - LinkedInPoster - INFO - ============================================================
+2026-03-31 22:37:07,220 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-03-31 22:37:07,220 - LinkedInPoster - INFO - Please login manually
+2026-03-31 22:37:07,220 - LinkedInPoster - INFO - ============================================================
+2026-03-31 22:37:13,547 - LinkedInPoster - INFO - Waiting for login...
+2026-03-31 22:39:13,555 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-03-31 22:45:03,370 - LinkedInPoster - INFO - Created post draft: POST_linkedin_test_1774979103.md
+2026-03-31 22:45:03,372 - LinkedInPoster - INFO - Test draft created: D:\Coding world\Hackathone_0\Gold\AI_Employee_Vault\Pending_Approval\POST_linkedin_test_1774979103.md
+2026-03-31 22:45:21,396 - LinkedInPoster - INFO - Checking for approved posts...
+2026-03-31 22:45:21,397 - LinkedInPoster - INFO - Found 2 approved post(s)
+2026-03-31 22:45:21,397 - LinkedInPoster - INFO - Publishing: POST_FACEBOOK_demo_project.md
+2026-03-31 22:45:39,456 - LinkedInPoster - ERROR - Timeout waiting for LinkedIn to load
+2026-03-31 22:45:39,458 - LinkedInPoster - ERROR - Failed to publish post: POST_FACEBOOK_demo_project.md
+2026-03-31 22:45:44,464 - LinkedInPoster - INFO - Publishing: POST_LINKEDIN_demo_project.md
+2026-03-31 22:46:00,952 - LinkedInPoster - ERROR - Timeout waiting for LinkedIn to load
+2026-03-31 22:46:00,952 - LinkedInPoster - ERROR - Failed to publish post: POST_LINKEDIN_demo_project.md
+2026-09-21 08:06:24,523 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:06:24,524 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:06:24,524 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:06:24,524 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:06:24,525 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:06:24,525 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:06:29,692 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:08:29,709 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:08:34,345 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:08:36,505 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:09:42,726 - asyncio - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-09-21 08:09:42,727 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task cancelling name='Task-6' coro=<Page.wait_for_selector() done, defined at /mnt/AnasData/Coding world/Hackathone_0/Gold/venv/lib/python3.14/site-packages/playwright/_impl/_page.py:422> wait_for=<Future finished result=None> cb=[SyncBase._sync.<locals>.<lambda>() at /mnt/AnasData/Coding world/Hackathone_0/Gold/venv/lib/python3.14/site-packages/playwright/_impl/_sync_base.py:111]>
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:09:47,595 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:09:49,957 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:11:49,966 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-09-21 08:11:56,987 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:11:56,987 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:11:56,987 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:11:56,988 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:11:56,988 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:11:56,988 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:12:01,439 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:14:01,447 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-09-21 08:15:31,725 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:15:31,726 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:15:31,726 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:15:31,726 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:15:31,726 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:15:31,727 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:15:35,977 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:17:35,992 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.
+2026-09-21 08:17:48,129 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:17:48,129 - LinkedInPoster - INFO - LinkedIn Setup
+2026-09-21 08:17:48,131 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:17:48,132 - LinkedInPoster - INFO - Opening LinkedIn for login...
+2026-09-21 08:17:48,132 - LinkedInPoster - INFO - Please login manually
+2026-09-21 08:17:48,133 - LinkedInPoster - INFO - ============================================================
+2026-09-21 08:17:52,544 - LinkedInPoster - INFO - Waiting for login...
+2026-09-21 08:19:52,554 - LinkedInPoster - ERROR - Timeout waiting for login. Please try again.

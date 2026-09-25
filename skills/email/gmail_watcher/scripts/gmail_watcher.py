@@ -23,6 +23,19 @@ from nexus.config import (
     NEEDS_ACTION, PENDING_APPROVAL, APPROVED, DONE, LOGS,
     CREDENTIALS_FILE, TOKEN_FILE, BROWSER_DATA, DROP_FOLDER
 )
+
+# Gmail API imports
+try:
+    from google.auth.transport.requests import Request
+    from google.oauth2.credentials import Credentials
+    from google_auth_oauthlib.flow import InstalledAppFlow
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
+except ImportError:
+    print("Error: Gmail API libraries not installed.")
+    print("Run: pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client")
+    sys.exit(1)
+
 PROCESSED_FILE = LOGS.parent / ".processed_emails"
 
 # Gmail API scopes
@@ -53,7 +66,7 @@ class GmailWatcher(BaseWatcher):
             with open(PROCESSED_FILE, 'w') as f:
                 json.dump(list(self.processed_ids), f)
         except Exception as e:
-            logger.error(f"Could not save processed IDs: {e}")
+            self.logger.error(f"Could not save processed IDs: {e}")
 
     @with_retry(max_attempts=3, base_delay=2, max_delay=30)
     def authenticate(self):
@@ -89,7 +102,7 @@ class GmailWatcher(BaseWatcher):
                 creds = flow.run_local_server(port=0)
                 self.logger.info("New token obtained successfully")
 
-            # Save credentials for next run
+            # Save credentials
             with open(TOKEN_FILE, 'w') as token:
                 token.write(creds.to_json())
 
@@ -98,7 +111,7 @@ class GmailWatcher(BaseWatcher):
             self.logger.info("Gmail API authenticated successfully")
         except Exception as e:
             self.logger.error(f"Failed to build Gmail service: {e}")
-            raise TransientError(f"Failed to build Gmail service: {e}")
+            sys.exit(1)
 
     @with_retry(max_attempts=3, base_delay=1, max_delay=10)
     def check_for_updates(self) -> List[Any]:
@@ -157,7 +170,7 @@ class GmailWatcher(BaseWatcher):
             }
 
         except Exception as e:
-            logger.error(f"Error getting email details: {e}")
+            self.logger.error(f"Error getting email details: {e}")
             return None
 
     def create_action_file(self, item: Any) -> Optional[Path]:
@@ -177,7 +190,7 @@ class GmailWatcher(BaseWatcher):
             timestamp = int(time.time())
             safe_subject = "".join(c for c in subject if c.isalnum() or c in (' ', '-', '_'))[:50]
             filename = f"EMAIL_{safe_subject.replace(' ', '_')}_{timestamp}.md"
-            filepath = self.needs_action / filename
+            filepath = NEEDS_ACTION / filename
 
             # Determine priority
             priority = 'high' if 'IMPORTANT' in email['labels'] else 'medium'

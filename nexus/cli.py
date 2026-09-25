@@ -87,7 +87,7 @@ def social():
     pass
 
 @social.command()
-@click.option('--platform', type=click.Choice(['linkedin', 'facebook', 'twitter']), required=True)
+@click.option('--platform', type=click.Choice(['linkedin', 'facebook']), required=True)
 @click.option('--content', required=True, help='Post content')
 @click.option('--image', help='Image path')
 @click.option('--schedule', help='Schedule time (ISO format)')
@@ -100,13 +100,10 @@ def post(platform, content, image, schedule):
     elif platform == 'facebook':
         from skills.social.facebook_poster.scripts.facebook_poster import create_post_draft
         filepath = create_post_draft(content, image_path=image)
-    elif platform == 'twitter':
-        from skills.twitter_poster.scripts.twitter_poster import create_tweet_draft
-        filepath = create_tweet_draft(content, image_path=image)
     console.print(f"[green]✓[/green] Post draft created: {filepath}")
 
 @social.command()
-@click.option('--platform', type=click.Choice(['linkedin', 'facebook', 'twitter']), required=True)
+@click.option('--platform', type=click.Choice(['linkedin', 'facebook']), required=True)
 def publish(platform):
     """Publish all approved posts"""
     if platform == 'linkedin':
@@ -114,15 +111,12 @@ def publish(platform):
         poster = LinkedInPoster()
         poster.process_approved_posts()
     elif platform == 'facebook':
-        from skills.facebook_poster.scripts.facebook_poster import publish_approved_posts
+        from skills.social.facebook_poster.scripts.facebook_poster import publish_approved_posts
         publish_approved_posts()
-    elif platform == 'twitter':
-        from skills.twitter_poster.scripts.twitter_poster import publish_approved_tweets
-        publish_approved_tweets()
     console.print(f"[green]✓[/green] Approved {platform} posts published")
 
 @social.command()
-@click.option('--platform', type=click.Choice(['linkedin', 'facebook', 'twitter', 'whatsapp']), required=True)
+@click.option('--platform', type=click.Choice(['linkedin', 'facebook', 'whatsapp']), required=True)
 def setup(platform):
     """Initial setup - authenticate with platform"""
     if platform == 'linkedin':
@@ -130,10 +124,7 @@ def setup(platform):
         poster = LinkedInPoster()
         poster.setup_session()
     elif platform == 'facebook':
-        from skills.facebook_poster.scripts.facebook_poster import test_setup
-        test_setup()
-    elif platform == 'twitter':
-        from skills.twitter_poster.scripts.twitter_poster import test_setup
+        from skills.social.facebook_poster.scripts.facebook_poster import test_setup
         test_setup()
     elif platform == 'whatsapp':
         from skills.whatsapp_watcher.scripts.whatsapp_watcher import WhatsAppWatcher
@@ -422,7 +413,7 @@ def init():
     console.print("  1. nexus email auth          # Authenticate Gmail")
     console.print("  2. nexus social setup linkedin  # Setup LinkedIn")
     console.print("  3. nexus daemon start --foreground  # Start processing")
-    console.print("  3. nexus status              # Check status")
+    console.print("  4. nexus status              # Check status")
 
 if __name__ == '__main__':
     cli()

@@ -8,3 +8,7 @@
 2026-09-21 08:26:36,252 - FileSystemWatcher - INFO - Found 1 new file(s)
 2026-09-21 08:26:36,253 - FileSystemWatcher - INFO - Created action file: FILE_invoice_request_1789961196.md
 2026-09-21 08:26:36,258 - FileSystemWatcher - INFO - Test complete
+2026-09-25 19:37:18,030 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/Nexus_Drop
+2026-09-25 19:37:29,208 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/Nexus_Drop
+2026-09-25 19:37:29,708 - FileSystemWatcher - INFO - New file detected: new_test_file.txt
+2026-09-25 19:37:29,714 - FileSystemWatcher - INFO - Created action file: FILE_new_test_file_1790347049.md

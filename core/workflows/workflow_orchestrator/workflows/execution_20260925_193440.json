@@ -1,0 +1,36 @@
+{
+  "workflow": "client_invoice",
+  "started_at": "2026-09-25T19:34:40.398442",
+  "steps": [
+    {
+      "step": "create_invoice",
+      "domain": "odoo",
+      "status": "success",
+      "timestamp": "2026-09-25T19:34:40.398879",
+      "message": "Invoice created (simulated)"
+    },
+    {
+      "step": "send_email",
+      "domain": "gmail",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:34:40.399310",
+      "message": "Email draft created, awaiting approval"
+    },
+    {
+      "step": "post_update",
+      "domain": "linkedin",
+      "status": "approval_required",
+      "timestamp": "2026-09-25T19:34:40.399638",
+      "message": "LinkedIn post draft created, awaiting approval"
+    },
+    {
+      "step": "update_dashboard",
+      "domain": "vault",
+      "status": "success",
+      "timestamp": "2026-09-25T19:34:40.400018",
+      "message": "Dashboard updated"
+    }
+  ],
+  "status": "awaiting_approval",
+  "completed_at": "2026-09-25T19:34:40.400174"
+}

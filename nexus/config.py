@@ -51,8 +51,8 @@ DROP_FOLDER = Path.home() / "Nexus_Drop"
 # Odoo defaults
 ODOO_URL = "http://localhost:8069"
 ODOO_DB = "AiEmployee"
-ODOO_USERNAME = os.getenv("ODOO_USERNAME", "ranabro353570@gmail.com")
-ODOO_PASSWORD = os.getenv("ODOO_PASSWORD", "AliAli123123321..")
+ODOO_USERNAME = os.getenv("ODOO_USERNAME", "admin@nexus.local")
+ODOO_PASSWORD = os.getenv("ODOO_PASSWORD", "changeme123")
 
 # Initialize on import
 ensure_workspace()

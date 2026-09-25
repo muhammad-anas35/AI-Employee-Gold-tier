@@ -3,8 +3,8 @@ import xmlrpc.client
 # Connection details
 url = 'http://localhost:8069'
 db = 'AiEmployee'
-username = 'ranabro353570@gmail.com'
-password = 'AliAli123123321..'
+username = 'admin@nexus.local'
+password = 'changeme123'
 
 print("Testing Odoo API connection...")
 

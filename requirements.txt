@@ -1,4 +1,4 @@
-# Silver Tier Requirements - Core Dependencies
+# Nexus Requirements - Core Dependencies
 
 # Gmail API (Required for gmail-watcher and send-email)
 google-auth-oauthlib==1.2.0

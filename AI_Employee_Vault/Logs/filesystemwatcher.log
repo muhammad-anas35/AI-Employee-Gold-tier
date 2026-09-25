@@ -1,0 +1,7 @@
+2026-09-25 19:31:59,100 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/AI_Employee_Drop
+2026-09-25 19:31:59,602 - FileSystemWatcher - INFO - New file detected: invoice_request.txt
+2026-09-25 19:35:51,282 - FileSystemWatcher - INFO - Drop folder ready: /home/manas/AI_Employee_Drop
+2026-09-25 19:35:51,783 - FileSystemWatcher - INFO - New file detected: invoice_request.txt
+2026-09-25 19:35:52,284 - FileSystemWatcher - INFO - New file detected: blog_post.txt
+2026-09-25 19:35:52,286 - FileSystemWatcher - INFO - Created action file: FILE_invoice_request_1790346952.md
+2026-09-25 19:35:52,290 - FileSystemWatcher - INFO - Created action file: FILE_blog_post_1790346952.md

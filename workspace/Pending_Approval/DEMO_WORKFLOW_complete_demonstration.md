@@ -7,7 +7,7 @@ status: pending
 # Complete System Demonstration Workflow
 
 ## Objective
-Demonstrate all Gold Tier AI Employee features in a single comprehensive workflow for demo video recording.
+Demonstrate all Nexus AI Employee features in a single comprehensive workflow for demo video recording.
 
 ## Workflow Steps
 

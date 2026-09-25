@@ -1,7 +1,60 @@
-2026-09-21 12:42:16,526 - EmailSender - WARNING - Could not load token: name 'Credentials' is not defined
-2026-09-21 12:44:38,719 - EmailSender - ERROR - Token refresh failed: ('invalid_grant: Bad Request', {'error': 'invalid_grant', 'error_description': 'Bad Request'})
-2026-09-21 12:44:38,807 - google_auth_oauthlib.flow - INFO - Please visit this URL to authorize this application: https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A40541%2F&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.readonly+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.compose&state=PxoCT3X7qoMlXpk0mAAIZADn5mNaBe&code_challenge=9PyEO4zy4YHyQVUu2UyHZht3lUqsU2SAl-851Z1wVlg&code_challenge_method=S256&access_type=offline
-2026-09-21 12:44:57,094 - google_auth_oauthlib.flow - INFO - "GET /?state=PxoCT3X7qoMlXpk0mAAIZADn5mNaBe&iss=https://accounts.google.com&code=4/0ATsMZqB9Bx4aNx10mY1PAF8L7PVPzN9gm59nZe98PZ7kVvZ1genjnq1s6caWfBhLvtMFHw&scope=https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.compose%20https://www.googleapis.com/auth/gmail.readonly HTTP/1.1" 200 65
-2026-09-21 12:44:57,598 - EmailSender - INFO - New token obtained successfully
-2026-09-21 12:44:57,608 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
-2026-09-21 12:44:57,613 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-20 02:13:07,097 - EmailSender - ERROR - Token refresh failed: ('invalid_scope: Bad Request', {'error': 'invalid_scope', 'error_description': 'Bad Request'})
+2026-03-20 02:13:07,101 - EmailSender - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Silver\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-20 02:13:07,101 - EmailSender - ERROR - Please download OAuth2 credentials from Google Cloud Console
+2026-03-20 02:13:25,408 - EmailSender - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Silver\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-20 02:13:25,409 - EmailSender - ERROR - Please download OAuth2 credentials from Google Cloud Console
+2026-03-20 23:34:45,287 - EmailSender - INFO - Token refreshed successfully
+2026-03-20 23:34:45,300 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-20 23:34:45,325 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-20 23:34:45,325 - EmailSender - INFO - Approval required: New contact (alibahi353570@gmail.com)
+2026-03-20 23:34:45,326 - EmailSender - INFO - Created email request: EMAIL_alibahi353570_1774031685.md (status: pending_approval)
+2026-03-20 23:34:45,326 - EmailSender - INFO - Email request created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Pending_Approval\EMAIL_alibahi353570_1774031685.md
+2026-03-20 23:34:45,327 - EmailSender - INFO - Approval required. Move to /Approved/ to send.
+2026-03-20 23:39:31,780 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-20 23:39:31,782 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-20 23:39:31,782 - EmailSender - INFO - Checking for approved emails...
+2026-03-20 23:39:31,782 - EmailSender - INFO - Processing: EMAIL_alibahi353570_1774031685.md
+2026-03-20 23:39:40,702 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-20 23:39:40,702 - EmailSender - INFO - Message ID: 19d0c8bcbb3f18bf
+2026-03-20 23:39:40,703 - EmailSender - INFO - Added known contact: alibahi353570@gmail.com
+2026-03-21 00:51:55,017 - EmailSender - INFO - Token refreshed successfully
+2026-03-21 00:51:55,033 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-21 00:51:55,058 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-21 00:51:55,059 - EmailSender - INFO - Created email request: EMAIL_alibahi353570_1774036315.md (status: ready_to_send)
+2026-03-21 00:51:55,060 - EmailSender - INFO - Email request created: D:\Coding world\Hackathone_0\Silver\AI_Employee_Vault\Plans\EMAIL_alibahi353570_1774036315.md
+2026-03-21 00:51:55,061 - EmailSender - INFO - Auto-approved, sending immediately...
+2026-03-21 00:51:56,463 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-21 00:51:56,464 - EmailSender - INFO - Message ID: 19d0ccdf3b135534
+2026-03-31 22:11:44,606 - EmailSender - ERROR - Credentials file not found: D:\Coding world\Hackathone_0\Gold\client_secret_546836721365-jsqg49259347e8l9kghrq80o9j3htrql.apps.googleusercontent.com.json
+2026-03-31 22:11:44,607 - EmailSender - ERROR - Please download OAuth2 credentials from Google Cloud Console
+2026-03-31 22:12:32,766 - EmailSender - ERROR - Token refresh failed: ('invalid_grant: Token has been expired or revoked.', {'error': 'invalid_grant', 'error_description': 'Token has been expired or revoked.'})
+2026-03-31 22:19:50,675 - google_auth_oauthlib.flow - INFO - "GET /?state=qMVwkWs7FoX9MihPAk8gooo6KdMnrm&iss=https://accounts.google.com&code=4/0Aci98E85Em26W0ZrAf04cHT4Pz_ua0oUSJ1kcQ_XSxrNrnQIs9LlGamPZPck0KIN2tVj7g&scope=https://www.googleapis.com/auth/gmail.readonly%20https://www.googleapis.com/auth/gmail.send%20https://www.googleapis.com/auth/gmail.compose HTTP/1.1" 200 65
+2026-03-31 22:19:52,013 - EmailSender - INFO - New token obtained successfully
+2026-03-31 22:19:52,022 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-31 22:19:52,041 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-31 22:19:52,043 - EmailSender - INFO - Checking for approved emails...
+2026-03-31 22:19:52,043 - EmailSender - INFO - Processing: EMAIL_demo_summary_alibahi.md
+2026-03-31 22:19:53,406 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-31 22:19:53,406 - EmailSender - INFO - Message ID: 19d44e8b0228ac3a
+2026-03-31 22:20:26,454 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-31 22:20:26,460 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-31 22:20:26,461 - EmailSender - INFO - Authentication complete
+2026-03-31 22:20:46,147 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-31 22:20:46,150 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-31 22:20:46,150 - EmailSender - INFO - Checking for approved emails...
+2026-03-31 22:20:46,150 - EmailSender - INFO - No approved emails to send
+2026-03-31 22:22:03,980 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-03-31 22:22:03,982 - EmailSender - INFO - Gmail API authenticated successfully
+2026-03-31 22:22:03,982 - EmailSender - INFO - Checking for approved emails...
+2026-03-31 22:22:03,982 - EmailSender - INFO - Processing: EMAIL_demo_summary_alibahi.md
+2026-03-31 22:22:05,649 - EmailSender - INFO - Email sent successfully to alibahi353570@gmail.com
+2026-03-31 22:22:05,649 - EmailSender - INFO - Message ID: 19d44eab5ec73d3d
+2026-09-21 08:26:08,130 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-09-21 08:26:08,132 - EmailSender - INFO - Gmail API authenticated successfully
+2026-09-21 08:26:08,133 - EmailSender - INFO - Authentication complete
+2026-09-21 08:26:14,383 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2026-09-21 08:26:14,387 - EmailSender - INFO - Gmail API authenticated successfully
+2026-09-21 08:26:14,390 - EmailSender - INFO - Approval required: New contact (test@example.com)
+2026-09-21 08:26:14,392 - EmailSender - INFO - Created email request: EMAIL_test_1789961174.md (status: pending_approval)
+2026-09-21 08:26:14,393 - EmailSender - INFO - Email request created: /mnt/AnasData/Coding world/Hackathone_0/Gold/AI_Employee_Vault/Pending_Approval/EMAIL_test_1789961174.md
+2026-09-21 08:26:14,393 - EmailSender - INFO - Approval required. Move to /Approved/ to send.

@@ -9,7 +9,7 @@ image: poster.jpeg
 
 **Content:**
 
-🎉 Excited to share my Gold Tier AI Employee project!
+🎉 Excited to share my Nexus AI Employee project!
 
 I built a complete autonomous business automation system that handles everything from email monitoring to social media posting and accounting integration.
 
@@ -26,7 +26,7 @@ I built a complete autonomous business automation system that handles everything
 🤖 75% autonomy with human-in-the-loop approval
 
 **Technical Achievement:**
-🏆 All 12 Gold Tier requirements met
+🏆 All 12 Nexus requirements met
 📝 6,537 lines of production-ready code
 ⚙️ 14 agent skills implemented
 ✅ Complete audit trail and error recovery

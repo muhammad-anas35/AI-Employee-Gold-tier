@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-File System Watcher for AI Employee
-Monitors a drop folder and creates action files in Needs_Action
+File System Watcher for Nexus
+Monitors a drop folder and creates action files in inbox
 """
 
 import os
@@ -19,21 +19,18 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from src.watchers.base_watcher import BaseWatcher
 from src.utils.retry_handler import with_retry
+from nexus.config import NEEDS_ACTION, LOGS, DROP_FOLDER, WORKSPACE
 
-# Configuration
-VAULT_PATH = Path(__file__).parent.parent.parent / "AI_Employee_Vault"
-DROP_FOLDER = Path.home() / "AI_Employee_Drop"
-PROCESSED_FILE = VAULT_PATH / ".processed_files"
+PROCESSED_FILE = WORKSPACE / ".processed_files"
 
 
 class FileSystemWatcher(BaseWatcher):
     """Monitors drop folder for new files"""
 
-    def __init__(self, vault_path: Path = VAULT_PATH, check_interval: int = 5):
-        super().__init__(vault_path, check_interval)
+    def __init__(self, check_interval: int = 5):
+        super().__init__(str(NEEDS_ACTION.parent), check_interval)
         self.drop_folder = DROP_FOLDER
         self.processed_files = self._load_processed_files()
-        self.pending_files = []
 
         # Ensure drop folder exists
         self.drop_folder.mkdir(parents=True, exist_ok=True)
@@ -107,7 +104,7 @@ class FileSystemWatcher(BaseWatcher):
 
             # Create action file name
             action_filename = f"FILE_{source_path.stem}_{int(time.time())}.md"
-            action_filepath = self.needs_action / action_filename
+            action_filepath = NEEDS_ACTION / action_filename
 
             # Create markdown content
             content = f"""---
@@ -138,7 +135,7 @@ A new file has been dropped for processing.
 - [ ] Review file contents
 - [ ] Determine action needed
 - [ ] Process or archive
-- [ ] Move to /Done when complete
+- [ ] Move to /archive when complete
 
 ## Notes
 
@@ -164,7 +161,7 @@ def main():
     """Main entry point"""
     import argparse
 
-    parser = argparse.ArgumentParser(description='File System Watcher for AI Employee')
+    parser = argparse.ArgumentParser(description='File System Watcher for Nexus')
     parser.add_argument('--interval', type=int, default=5,
                         help='Check interval in seconds (default: 5)')
     parser.add_argument('--test', action='store_true',

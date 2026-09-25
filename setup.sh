@@ -1,11 +1,11 @@
 #!/bin/bash
-# Setup script for AI Employee Bronze Tier
+# Setup script for AI Employee system
 # Initializes the vault and installs dependencies
 
 set -e
 
 echo "=========================================="
-echo "AI Employee - Bronze Tier Setup"
+echo "AI Employee - system Setup"
 echo "=========================================="
 echo ""
 

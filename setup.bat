@@ -1,12 +1,12 @@
 @echo off
-REM Setup script for AI Employee Bronze Tier (Windows)
+REM Setup script for AI Employee system
 REM Initializes the vault and installs dependencies
 
 setlocal enabledelayedexpansion
 
 echo.
 echo ==========================================
-echo AI Employee - Bronze Tier Setup (Windows)
+echo AI Employee - system Setup
 echo ==========================================
 echo.
 

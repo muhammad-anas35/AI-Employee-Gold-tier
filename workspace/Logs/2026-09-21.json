@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-09-21T08:26:14.392502",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_test_1789961174.md",
+      "to": "test@example.com",
+      "subject": "Test",
+      "status": "pending_approval"
+    },
+    "status": "success"
+  }
+]

@@ -1,297 +1,199 @@
-# 🏆 Gold Tier AI Employee - Personal AI Employee Hackathon
+# 🔗 Nexus
 
-**Developer:** Muhammad Anas Asif
-**LinkedIn:** [https://www.linkedin.com/in/muhammad-anas35/](https://www.linkedin.com/in/muhammad-anas35/)
+> **Your Personal AI Assistant** — Automate email, accounting, social media, and workflows locally.
 
-**Status:** ✅ 100% Complete - Gold Tier Achieved! 🎉
-**Last Updated:** 2026-03-27
-**Silver Tier:** ✅ 8/8 Requirements Met (100%)
-**Gold Tier:** ✅ 12/12 Requirements Met (100%)
-**Completion Date:** 2026-03-27
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)]()
 
 ---
 
-## 👨‍💻 About the Developer
+## ✨ Features
 
-**Muhammad Anas Asif** is a software developer specializing in AI automation and intelligent systems. This Gold Tier AI Employee implementation demonstrates expertise in:
-- Autonomous agent systems and workflow automation
-- Multi-domain integration (Email, Social Media, Accounting, Files)
-- Gmail API and Odoo XML-RPC integration
-- Human-in-the-loop approval workflows
-- Cross-domain workflow orchestration
-- Production-ready error recovery and audit logging
-- Python development with clean architecture patterns
-- Claude Code integration and Agent Skills development
-
-Connect on LinkedIn: [Muhammad Anas Asif](https://www.linkedin.com/in/muhammad-anas35/)
-
----
-
-## 🎉 Gold Tier Complete - Ready for Submission!
-
-This is a **fully functional Gold Tier implementation** of the Personal AI Employee hackathon project. All 12 Gold tier requirements met, tested, and ready for submission.
-
-### 🏆 Gold Tier Achievement: 12/12 (100%)
-
-| Requirement | Status | Implementation |
-|-------------|--------|----------------|
-| 1. All Silver Requirements | ✅ 100% | 8/8 features working |
-| 2. Cross-Domain Integration | ✅ 100% | Workflow orchestrator |
-| 3. Odoo Accounting | ✅ 100% | XML-RPC API integration |
-| 4. Facebook/Instagram | ✅ 100% | Playwright automation |
-| 5. Twitter (X) | ✅ 100% | Playwright automation |
-| 6. Multiple MCP Servers | ✅ 100% | Filesystem + Playwright |
-| 7. Weekly Business Audit | ✅ 100% | Automated reports |
-| 8. Error Recovery | ✅ 100% | Exponential backoff |
-| 9. Audit Logging | ✅ 100% | Comprehensive events |
-| 10. Ralph Wiggum Loop | ✅ 100% | Autonomous processing |
-| 11. Documentation | ✅ 100% | Complete architecture |
-| 12. All as Agent Skills | ✅ 100% | 15+ skills implemented |
-
-**Final Grade: Gold Tier 100% Complete** 🏆
-
----
-
-## 🚀 Key Features
-
-### Autonomous Systems
-- **Ralph Wiggum Loop** - Continuous task processing every 10 minutes
-- **Workflow Orchestrator** - Cross-domain automation (4 templates)
-- **Business Audit** - Weekly intelligence reports
-
-### Integrations
-- **Gmail** - Email monitoring and sending
-- **Odoo** - Accounting and invoicing
-- **Facebook** - Automated posting with approval
-- **Twitter** - Automated tweeting with approval
-- **LinkedIn** - Business updates with approval
-- **WhatsApp** - Message monitoring
-- **File System** - File drop monitoring
-
-### Infrastructure
-- **Error Recovery** - Exponential backoff retry logic
-- **Audit Logging** - Comprehensive event tracking
-- **Approval Workflow** - Human-in-the-loop for sensitive actions
-- **MCP Servers** - Filesystem + Playwright
-- **Dashboard** - Real-time metrics
-- **Documentation** - Complete architecture docs
-
----
-
-## 💰 Business Value
-
-**Time Saved:** 15 hours/week
-**Annual Value:** $50,100/year
-**Autonomy Level:** 75%
-**ROI:** Infinite (no ongoing costs)
+| Domain | Capabilities |
+|--------|--------------|
+| **📧 Email** | Gmail monitoring, smart drafting, approval workflow, sending |
+| **💰 Accounting** | Odoo integration: invoices, expenses, payments, P&L, aged receivables |
+| **📱 Social Media** | LinkedIn & Facebook posting with approval, scheduling, media support |
+| **🤖 Autonomy** | Ralph Wiggum Loop — continuous task processing every 10 minutes |
+| **🔄 Workflows** | Cross-domain automation: invoice → email → social, file → multi-platform |
+| **📊 Intelligence** | Weekly business audits, CEO briefings, financial reports |
+| **🔒 Security** | Human-in-the-loop approval, local-first, encrypted credentials |
 
 ---
 
 ## 🚀 Quick Start
 
-### Start Autonomous Processing
+```bash
+# 1. Clone and enter
+git clone <your-repo> nexus
+cd nexus
+
+# 2. Install dependencies
+pip install -e ".[dev]"
+playwright install chromium
+
+# 3. Run setup wizard
+nexus init
+
+# 4. Authenticate services
+nexus email auth
+nexus social setup linkedin
+nexus social setup facebook
+
+# 4. Start the daemon
+nexus daemon start --foreground
+```
+
+---
+
+## 📖 Commands
+
+### Email
+```bash
+nexus email send --to "client@example.com" --subject "Invoice" --body "Please find attached..."
+nexus email send-approved          # Send all approved drafts
+nexus email auth                   # Authenticate Gmail
+```
+
+### Social Media
+```bash
+nexus social post linkedin --content "Excited to announce..." --schedule "2024-01-15T09:00:00"
+nexus social post facebook --content "New blog post!" --image ./banner.png
+nexus social publish linkedin      # Publish approved posts
+nexus social setup linkedin        # First-time LinkedIn auth
+nexus social setup facebook        # First-time Facebook auth
+```
+
+### Accounting (Odoo)
+```bash
+nexus accounting invoice --client "Acme Corp" --email "billing@acme.com" --amount 5000 --description "Q1 Consulting"
+nexus accounting expense --category "Software" --amount 99 --description "Monthly subscription"
+nexus accounting summary --period this-month
+```
+
+### Workflows
+```bash
+nexus workflow run client_invoice    # Email → Invoice → Email → Social
+nexus workflow run content_publish   # File → LinkedIn → Facebook → Email
+nexus workflow list                  # Show all workflows
+```
+
+### Autonomy
+```bash
+nexus autonomy start --interval 10   # Ralph Wiggum Loop (every 10 min)
+```
+
+### Daemon & Status
+```bash
+nexus daemon start --foreground      # Start all watchers + orchestrator
+nexus status                         # Dashboard view
+nexus doctor                         # Health checks
+```
+
+### Configuration
+```bash
+nexus config show                    # View current config
+nexus init                           # Interactive setup wizard
+```
+
+---
+
+## 🏗 Architecture
+
+```
+nexus/
+├── nexus/                 # Main package
+│   ├── cli.py            # Command interface (Click + Rich)
+│   ├── config.py         # Centralized configuration
+│   └── __main__.py       # Entry point
+├── skills/               # Domain skills
+│   ├── email/            # Gmail watcher + sender
+│   ├── social/           # LinkedIn, Facebook, scheduler
+│   └── accounting/       # Odoo XML-RPC client
+├── core/                 # Core engines
+│   ├── autonomy/         # Ralph Wiggum Loop
+│   ├── intelligence/     # Business audit, CEO briefings
+│   ├── workflows/        # Cross-domain workflow orchestrator
+│   └── orchestrator/     # Master daemon
+├── src/                  # Shared libraries
+│   ├── integrations/     # VaultManager (Obsidian vault ops)
+│   ├── utils/            # Rate limiter, retry, audit logger
+│   └── watchers/         # File system watcher
+├── workspace/            # Local vault (gitignored)
+│   ├── inbox/            # Needs_Action
+│   ├── pending/          # Pending_Approval
+│   ├── approved/         # Approved
+│   ├── archive/          # Done
+│   ├── reports/          # Business reports
+│   └── logs/             # Audit trail
+├── infra/                # Docker Compose (Odoo + PostgreSQL)
+├── config/               # Config files (credentials, tokens)
+└── tests/                # Test suite
+```
+
+---
+
+## 🔐 Security
+
+- **Local-first**: All data stays on your machine
+- **Approval workflow**: Sensitive actions (sending email, posting social, payments) require human approval
+- **Credential storage**: OAuth tokens in `config/`, never committed
+- **Audit trail**: Every action logged to `workspace/logs/YYYY-MM-DD.json`
+
+---
+
+## 📚 Documentation
+
+- [Getting Started](docs/GETTING_STARTED.md) — 5-minute setup
+- [Configuration](docs/CONFIGURATION.md) — All config options
+- [Skills Reference](docs/SKILLS.md) — Skill catalog with examples
+- [Workflows](docs/WORKFLOWS.md) — Built-in workflows + custom creation
+- [Architecture](docs/ARCHITECTURE.md) — Technical deep dive
+- [Troubleshooting](docs/TROUBLESHOOTING.md) — Common issues & fixes
+
+---
+
+## 🧪 Testing
 
 ```bash
-# Ralph Wiggum Loop (processes tasks every 10 minutes)
-/loop 10m python .claude/skills/ralph-wiggum-loop/scripts/ralph_loop.py
+# Run all tests
+pytest tests/ -v
 
-# Weekly Business Audit (generates reports every Monday)
-/loop 1w python .claude/skills/business-audit/scripts/business_audit.py
-```
+# Run specific test
+pytest tests/test_odoo_api.py -v
 
-### Execute Workflows
-
-```bash
-# Client invoice workflow (Email → Invoice → Social)
-python .claude/skills/workflow-orchestrator/scripts/workflow_orchestrator.py --workflow client_invoice
-
-# Content publishing workflow (File → Multi-platform)
-python .claude/skills/workflow-orchestrator/scripts/workflow_orchestrator.py --workflow content_publish
-
-# List all workflows
-python .claude/skills/workflow-orchestrator/scripts/workflow_orchestrator.py --list
-```
-
-### Create Social Media Posts
-
-```bash
-# Facebook
-python .claude/skills/facebook-poster/scripts/facebook_poster.py --create "Your post"
-
-# Twitter
-python .claude/skills/twitter-poster/scripts/twitter_poster.py --create "Your tweet"
-
-# LinkedIn
-python .claude/skills/linkedin-poster/scripts/linkedin_poster.py --create "Your update"
-```
-
-### Test Email Workflow
-
-```bash
-# Send test email
-python .claude/skills/send-email/scripts/send_email.py \
-  --to "your-email@example.com" \
-  --subject "Test" \
-  --body "Hello from AI Employee"
-
-# Approve and send
-mv AI_Employee_Vault/Pending_Approval/EMAIL_*.md AI_Employee_Vault/Approved/
-python .claude/skills/send-email/scripts/send_email.py --send-approved
-```
-
-### Start All Watchers
-
-```bash
-# Start orchestrator (manages all watchers)
-python .claude/skills/orchestrator/scripts/orchestrator.py
+# Health check
+nexus doctor
 ```
 
 ---
 
-## 📊 Project Statistics
+## 🤝 Contributing
 
-**Development Time:** 3 days (~8 hours)
-**Lines of Code:** 5,000+
-**Agent Skills:** 15+
-**Python Files:** 30+
-**Documentation:** 20+ files
-**Test Coverage:** 100%
-
----
-
-## 📁 Project Structure
-
-```
-Gold/
-├── .claude/
-│   └── skills/                    # 15+ Agent Skills
-│       ├── gmail-watcher/         # Email monitoring
-│       ├── send-email/            # Email sending
-│       ├── facebook-poster/       # Facebook automation
-│       ├── twitter-poster/        # Twitter automation
-│       ├── linkedin-poster/       # LinkedIn automation
-│       ├── whatsapp-watcher/      # WhatsApp monitoring
-│       ├── odoo-integration/      # Accounting integration
-│       ├── ralph-wiggum-loop/     # Autonomous processing
-│       ├── business-audit/        # Weekly reports
-│       ├── workflow-orchestrator/ # Cross-domain workflows
-│       └── orchestrator/          # Master coordinator
-├── src/
-│   ├── integration/
-│   │   └── claude_integration.py  # VaultManager
-│   ├── utils/
-│   │   ├── retry_handler.py       # Error recovery
-│   │   ├── audit_logger.py        # Audit logging
-│   │   └── rate_limiter.py        # Rate limiting
-│   └── watchers/
-│       ├── base_watcher.py        # Base class
-│       └── filesystem_watcher.py  # File monitoring
-├── AI_Employee_Vault/             # Knowledge base
-│   ├── Dashboard.md               # Real-time metrics
-│   ├── Needs_Action/              # Pending tasks
-│   ├── Pending_Approval/          # Awaiting approval
-│   ├── Approved/                  # Approved actions
-│   ├── Done/                      # Completed tasks
-│   ├── Reports/                   # Business reports
-│   └── Logs/                      # Audit trail
-├── docs/
-│   ├── ARCHITECTURE.md            # System architecture
-│   ├── planning/                  # Implementation plans
-│   └── guides/                    # Setup guides
-└── config/
-    ├── .env                       # Configuration
-    └── mcp_config.json            # MCP servers
-```
+1. Fork the repository
+2. Create a feature branch
+3. Make changes with tests
+4. Run `ruff check . && black nexus/ && mypy nexus/`
+5. Submit PR
 
 ---
 
-## 📝 Documentation
+## 📄 License
 
-### Complete Documentation Available:
-- **ARCHITECTURE.md** - Complete system architecture
-- **CLAUDE.md** - Development guide
-- **GOLD_TIER_COMPLETE.md** - Gold tier completion summary
-- **PROJECT_FINAL_STATUS.md** - Final project status
-- **All SKILL.md files** - Individual skill documentation
-- **Setup guides** - Installation instructions
-- **Progress reports** - Day-by-day progress tracking
+MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🧪 All Features Tested
+## 🙏 Acknowledgments
 
-### Fully Tested ✅
-- Gmail watcher and sender
-- Facebook poster
-- Twitter poster
-- LinkedIn poster
-- WhatsApp watcher
-- Odoo invoice creation
-- Ralph Wiggum Loop
-- Business Audit
-- Workflow Orchestrator
-- Audit Logger
-- Error Recovery
-- MCP Servers (Filesystem + Playwright)
-- Approval Workflow
-- Dashboard Updates
+Built with:
+- [Claude Code](https://claude.ai/code) — AI reasoning
+- [Odoo](https://odoo.com) — Accounting backend
+- [Playwright](https://playwright.dev) — Browser automation
+- [Rich](https://rich.readthedocs.io) — Beautiful CLI
+- [Click](https://click.palletsprojects.com) — CLI framework
 
 ---
 
-## 🎯 Hackathon Submission
-
-### Ready for Submission ✅
-- [x] All 12 Gold tier requirements met
-- [x] All features working and tested
-- [x] Complete documentation
-- [x] Architecture documented
-- [x] Code organized and clean
-- [x] GitHub repository updated
-- [x] Demo-ready system
-
-### Submission Materials
-- **GitHub Repository:** https://github.com/muhammad-anas35/AI-Employee-Gold-tier
-- **Branch:** testing_stage
-- **Status:** 100% Complete
-- **Documentation:** Complete
-- **Demo:** System ready to demonstrate
-
----
-
-## 🏆 Achievements
-
-### Technical Excellence
-- ✅ 12/12 Gold tier requirements
-- ✅ 15+ agent skills
-- ✅ Autonomous task processing
-- ✅ Cross-domain workflows
-- ✅ Comprehensive audit logging
-- ✅ Production-ready architecture
-- ✅ Multiple MCP servers
-- ✅ Complete documentation
-
-### Business Value
-- ✅ 15 hrs/week time savings
-- ✅ $50,100/year value
-- ✅ 75% autonomy
-- ✅ Multi-domain integration
-- ✅ Weekly business intelligence
-- ✅ Automated accounting
-
----
-
-## 📞 Contact
-
-**Developer:** Muhammad Anas Asif
-**LinkedIn:** [https://www.linkedin.com/in/muhammad-anas35/](https://www.linkedin.com/in/muhammad-anas35/)
-**GitHub:** https://github.com/muhammad-anas35/AI-Employee-Gold-tier
-
----
-
-## 🎉 Gold Tier Complete!
-
-**Status:** ✅ 100% COMPLETE (12/12)
-**Ready for:** Hackathon Submission
-**Achievement:** Gold Tier 🏆
-
-**Congratulations on completing the Gold Tier AI Employee!**
+**Nexus** — Your Personal AI Assistant, running locally, under your control.

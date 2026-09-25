@@ -1,0 +1,81 @@
+2026-09-21 10:23:18,273 - WorkflowOrchestrator - INFO - 
+Available Workflows:
+2026-09-21 10:23:18,274 - WorkflowOrchestrator - INFO - ============================================================
+2026-09-21 10:23:18,275 - WorkflowOrchestrator - INFO - 
+client_invoice:
+2026-09-21 10:23:18,278 - WorkflowOrchestrator - INFO -   Name: Client Invoice Workflow
+2026-09-21 10:23:18,279 - WorkflowOrchestrator - INFO -   Description: Email → Invoice → Notification
+2026-09-21 10:23:18,279 - WorkflowOrchestrator - INFO -   Steps: 4
+2026-09-21 10:23:18,279 - WorkflowOrchestrator - INFO -   Trigger: email_received
+2026-09-21 10:23:18,279 - WorkflowOrchestrator - INFO - 
+content_publish:
+2026-09-21 10:23:18,280 - WorkflowOrchestrator - INFO -   Name: Content Publishing Workflow
+2026-09-21 10:23:18,280 - WorkflowOrchestrator - INFO -   Description: File → Multi-platform posting
+2026-09-21 10:23:18,280 - WorkflowOrchestrator - INFO -   Steps: 5
+2026-09-21 10:23:18,280 - WorkflowOrchestrator - INFO -   Trigger: file_dropped
+2026-09-21 10:23:18,282 - WorkflowOrchestrator - INFO - 
+payment_received:
+2026-09-21 10:23:18,282 - WorkflowOrchestrator - INFO -   Name: Payment Received Workflow
+2026-09-21 10:23:18,282 - WorkflowOrchestrator - INFO -   Description: Odoo → Email → Social
+2026-09-21 10:23:18,282 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 10:23:18,283 - WorkflowOrchestrator - INFO -   Trigger: invoice_paid
+2026-09-21 10:23:18,283 - WorkflowOrchestrator - INFO - 
+weekly_report:
+2026-09-21 10:23:18,283 - WorkflowOrchestrator - INFO -   Name: Weekly Report Distribution
+2026-09-21 10:23:18,283 - WorkflowOrchestrator - INFO -   Description: Generate and distribute weekly report
+2026-09-21 10:23:18,284 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 10:23:18,284 - WorkflowOrchestrator - INFO -   Trigger: scheduled_monday
+2026-09-21 12:42:05,997 - WorkflowOrchestrator - INFO - 
+Available Workflows:
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO - ============================================================
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO - 
+client_invoice:
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO -   Name: Client Invoice Workflow
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO -   Description: Email → Invoice → Notification
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO -   Steps: 4
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO -   Trigger: email_received
+2026-09-21 12:42:05,998 - WorkflowOrchestrator - INFO - 
+content_publish:
+2026-09-21 12:42:05,999 - WorkflowOrchestrator - INFO -   Name: Content Publishing Workflow
+2026-09-21 12:42:05,999 - WorkflowOrchestrator - INFO -   Description: File → Multi-platform posting
+2026-09-21 12:42:05,999 - WorkflowOrchestrator - INFO -   Steps: 5
+2026-09-21 12:42:06,000 - WorkflowOrchestrator - INFO -   Trigger: file_dropped
+2026-09-21 12:42:06,000 - WorkflowOrchestrator - INFO - 
+payment_received:
+2026-09-21 12:42:06,001 - WorkflowOrchestrator - INFO -   Name: Payment Received Workflow
+2026-09-21 12:42:06,001 - WorkflowOrchestrator - INFO -   Description: Odoo → Email → Social
+2026-09-21 12:42:06,001 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 12:42:06,001 - WorkflowOrchestrator - INFO -   Trigger: invoice_paid
+2026-09-21 12:42:06,003 - WorkflowOrchestrator - INFO - 
+weekly_report:
+2026-09-21 12:42:06,003 - WorkflowOrchestrator - INFO -   Name: Weekly Report Distribution
+2026-09-21 12:42:06,003 - WorkflowOrchestrator - INFO -   Description: Generate and distribute weekly report
+2026-09-21 12:42:06,003 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 12:42:06,003 - WorkflowOrchestrator - INFO -   Trigger: scheduled_monday
+2026-09-21 12:48:55,715 - WorkflowOrchestrator - INFO - 
+Available Workflows:
+2026-09-21 12:48:55,715 - WorkflowOrchestrator - INFO - ============================================================
+2026-09-21 12:48:55,715 - WorkflowOrchestrator - INFO - 
+client_invoice:
+2026-09-21 12:48:55,716 - WorkflowOrchestrator - INFO -   Name: Client Invoice Workflow
+2026-09-21 12:48:55,716 - WorkflowOrchestrator - INFO -   Description: Email → Invoice → Notification
+2026-09-21 12:48:55,716 - WorkflowOrchestrator - INFO -   Steps: 4
+2026-09-21 12:48:55,716 - WorkflowOrchestrator - INFO -   Trigger: email_received
+2026-09-21 12:48:55,717 - WorkflowOrchestrator - INFO - 
+content_publish:
+2026-09-21 12:48:55,717 - WorkflowOrchestrator - INFO -   Name: Content Publishing Workflow
+2026-09-21 12:48:55,717 - WorkflowOrchestrator - INFO -   Description: File → Multi-platform posting
+2026-09-21 12:48:55,717 - WorkflowOrchestrator - INFO -   Steps: 5
+2026-09-21 12:48:55,718 - WorkflowOrchestrator - INFO -   Trigger: file_dropped
+2026-09-21 12:48:55,718 - WorkflowOrchestrator - INFO - 
+payment_received:
+2026-09-21 12:48:55,718 - WorkflowOrchestrator - INFO -   Name: Payment Received Workflow
+2026-09-21 12:48:55,718 - WorkflowOrchestrator - INFO -   Description: Odoo → Email → Social
+2026-09-21 12:48:55,719 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 12:48:55,719 - WorkflowOrchestrator - INFO -   Trigger: invoice_paid
+2026-09-21 12:48:55,719 - WorkflowOrchestrator - INFO - 
+weekly_report:
+2026-09-21 12:48:55,719 - WorkflowOrchestrator - INFO -   Name: Weekly Report Distribution
+2026-09-21 12:48:55,722 - WorkflowOrchestrator - INFO -   Description: Generate and distribute weekly report
+2026-09-21 12:48:55,722 - WorkflowOrchestrator - INFO -   Steps: 3
+2026-09-21 12:48:55,723 - WorkflowOrchestrator - INFO -   Trigger: scheduled_monday

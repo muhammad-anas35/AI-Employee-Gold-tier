@@ -1,0 +1,14 @@
+[
+  {
+    "timestamp": "2026-03-21T00:51:55.059876",
+    "action_type": "email_request_created",
+    "actor": "email_sender",
+    "details": {
+      "file": "EMAIL_alibahi353570_1774036315.md",
+      "to": "alibahi353570@gmail.com",
+      "subject": "Test",
+      "status": "ready_to_send"
+    },
+    "status": "success"
+  }
+]
